@@ -20,6 +20,7 @@
     "core-js": "^2.4.1",
     "express": "^4.14.1",
     "gzippo": "^0.2.0",
+    "morgan": "^1.8.1",
     "rxjs": "^5.1.0",
     "typescript": "~2.0.3",
     "zone.js": "^0.7.6"
