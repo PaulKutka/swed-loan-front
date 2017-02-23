@@ -2,8 +2,8 @@
  * Created by paulius on 17.2.23.
  */
 var gzippo = require('gzippo');
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 app.use(express.logger('dev'));
 app.use(gzippo.staticGzip("" + __dirname + "/dist"));
