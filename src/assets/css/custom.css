@@ -1,0 +1,74 @@
+#main {
+    margin: auto;
+    max-width: 1128px;
+}
+
+#page-klub{
+  font-family: Lato, sans-serif;
+}
+
+.modal-header h3{
+    margin: 0;
+    padding: 0;
+}
+
+.form-border {
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 32px;
+    margin-bottom: 16px;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+h1.title, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Roboto, sans-serif;
+}
+
+.form-completion .row{
+  margin-top: 0;
+}
+
+body::before, #footer::before {
+    content: "";
+    display: block;
+    background: -ms-linear-gradient(left,#f58322 0,#ffcb13 100%);
+    background: linear-gradient(to right,#f58322 0,#ffcb13 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb661d',endColorstr='#f4ba44',GradientType=1);
+    height: 14px;
+}
+
+.logo{
+  height: 70px;
+  border:0;
+  vertical-align: middle;
+}
+
+.orange{
+  background: #FF8C00;
+}
+
+.mozilla-fix.hasMonth{
+  max-width: 6em;
+}
+
+.mozilla-fix.noMonth{
+  max-width: 8em;
+}
+
+.form h4{
+  margin-bottom: 2em;
+}
+
+.hidden{
+  display: none;
+}
