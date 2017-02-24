@@ -72,3 +72,7 @@ body::before, #footer::before {
 .hidden{
   display: none;
 }
+
+.hidden-tables{
+  display: none;
+}
