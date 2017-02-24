@@ -65,27 +65,27 @@ class Payment{
     this._monthNumber = value;
   }
 
-  get leftSum(): number {
+  get leftSum(): string {
     return this._leftSum;
   }
 
-  set leftSum(value: number) {
+  set leftSum(value: string) {
     this._leftSum = value;
   }
 
-  get monthlySum(): number {
+  get monthlySum(): string {
     return this._monthlySum;
   }
 
-  set monthlySum(value: number) {
+  set monthlySum(value: string) {
     this._monthlySum = value;
   }
 
-  get monthlyInterestSum(): number {
+  get monthlyInterestSum(): string {
     return this._monthlyInterestSum;
   }
 
-  set monthlyInterestSum(value: number) {
+  set monthlyInterestSum(value: string) {
     this._monthlyInterestSum = value;
   }
 
