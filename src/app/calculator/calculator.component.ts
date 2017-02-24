@@ -37,7 +37,7 @@ export class CalculatorComponent implements OnInit {
 
   calculatePayment(currentMonth:number, leftSum:number, monthlySum:number, monthlyInterestRate:number):Payment{
 
-    return new Payment(currentMonth+1, leftSum, monthlySum, leftSum*monthlyInterestRate);
+    return new Payment(currentMonth+1, leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum*monthlyInterestRate).toFixed(2));
 }
 
 }
@@ -45,12 +45,12 @@ export class CalculatorComponent implements OnInit {
 class Payment{
 
     private _monthNumber:number;
-    private _leftSum:number;
-    private _monthlySum:number;
-    private _monthlyInterestSum:number;
+    private _leftSum:string;
+    private _monthlySum:string;
+    private _monthlyInterestSum:string;
     usualServiceSum:number = 0.70;
 
-  constructor(monthNumber: number, leftSum: number, monthlySum: number, monthlyInterestSum: number) {
+  constructor(monthNumber: number, leftSum: string, monthlySum: string, monthlyInterestSum: string) {
     this._monthNumber = monthNumber;
     this._leftSum = leftSum;
     this._monthlySum = monthlySum;
