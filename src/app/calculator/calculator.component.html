@@ -1,17 +1,17 @@
 <form method="post" action="" class="form form-border">
   <h4>Informacija apie jūsų pageidaujamą paskolą</h4>
 
-  <div class="row gutters text-right">
+  <div class="row gutters text-right" >
     <div class="col col-4">
       <p>Pageidaujama paskolos suma</p>
     </div>
     <div class="col col-6">
-      <input type='range' min="500" max="580000" step="500">
+      <input type='range' min="500" max="580000" step="500" [ngModelOptions]="{standalone:true}" [(ngModel)]="loanSum">
     </div>
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input class="mozilla-fix noMonth" type="number"><span>Eur</span>
+          <input value="{{loanSum}}" class="mozilla-fix noMonth" type="number"><span>Eur</span>
         </div>
       </div>
 
@@ -23,12 +23,12 @@
       <p>Paskolos laikotarpis</p>
     </div>
     <div class="col col-6">
-      <input type='range' min="1" max="60" step="1">
+      <input type='range' min="1" max="60" step="1" [ngModelOptions]="{standalone:true}" [(ngModel)]="loanTime">
     </div>
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input class="mozilla-fix noMonth" type="number"><span>Mėn</span>
+          <input value="{{loanTime}}" class="mozilla-fix noMonth" type="number"><span>Mėn</span>
         </div>
       </div>
 
@@ -56,12 +56,12 @@
       <p>Jūsų grynosios mėnesio pajamos</p>
     </div>
     <div class="col col-6">
-      <input type='range' min="245" max="10000" step="5">
+      <input type='range' min="245" max="10000" step="5" [ngModelOptions]="{standalone:true}"  [(ngModel)]="loanPersonMoney">
     </div>
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input class="mozilla-fix hasMonth" type="number"><span>Eur/mėn</span>
+          <input value="{{loanPersonMoney}}" class="mozilla-fix hasMonth" type="number"><span>Eur/mėn</span>
         </div>
       </div>
     </div>
@@ -72,12 +72,12 @@
       <p>Sutuoktinio (bendraskolio) grynosios mėnesio pajamos</p>
     </div>
     <div class="col col-6">
-      <input type='range'>
+      <input type='range' min="245" max="10000" step="5" [ngModelOptions]="{standalone:true}"  [(ngModel)]="loanSpouseMoney">
     </div>
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input class="mozilla-fix hasMonth" type="number"><span>Eur/mėn</span>
+          <input value="{{loanSpouseMoney}}" class="mozilla-fix hasMonth" type="number"><span>Eur/mėn</span>
         </div>
       </div>
     </div>
