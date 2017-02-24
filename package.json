@@ -15,6 +15,7 @@
     "postinstall": "ng build && mv dist/* ."
   },
   "dependencies": {
+    "@angular/cli": "1.0.0-beta.32.3",
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",
     "@angular/compiler-cli": "~2.1.0",
@@ -27,13 +28,19 @@
     "@types/jasmine": "~2.2.30",
     "@types/node": "~6.0.42",
     "angular-cli": "1.0.0-beta.20-4",
-    "core-js": "^2.4.1",
-    "express": "3.0.0",
-    "gzippo": "^0.2.0",
-    "morgan": "^1.8.1",
-    "rxjs": "^5.1.0",
-    "typescript": "~2.0.3",
-    "zone.js": "^0.7.6"
+    "codelyzer": "~2.0.0-beta.4",
+    "jasmine-core": "~2.5.2",
+    "jasmine-spec-reporter": "~3.2.0",
+    "karma": "~1.4.1",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-cli": "~1.0.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "protractor": "~5.1.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.4.2",
+    "typescript": "2.0.0"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-beta.32.3",
@@ -53,9 +60,5 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.4.2",
     "typescript": "2.0.0"
-  },
-  "engines": {
-    "node": "7.5.0",
-    "npm": "4.2.0"
   }
 }
