@@ -37,7 +37,7 @@ export class PaymentsCalculated {
   private calculatePayment(currentMonth: number, leftSum: number,
                            monthlySum: number, monthlyInterestRate: number): Payment {
 
-    return new Payment(currentMonth + 1,
+    return new Payment(currentMonth,
       leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2));
   }
 

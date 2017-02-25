@@ -76,3 +76,7 @@ body::before, #footer::before {
 .hidden-tables{
   display: none;
 }
+
+th{
+  text-align: center;
+}

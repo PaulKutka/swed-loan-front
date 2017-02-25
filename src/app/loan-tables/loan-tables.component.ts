@@ -10,8 +10,7 @@ import {Payment} from "../calculator/payment";
 
 export class LoanTablesComponent implements OnInit {
 
-  @Input('loanArrayOutput')
-  loanArrayOutput:Payment[];
+  @Input('loanArrayOutput') loanArrayOutput:Payment[];
 
   constructor( ) {
 
