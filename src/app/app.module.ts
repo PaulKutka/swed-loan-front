@@ -6,11 +6,14 @@ import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
 import {CalculatorComponent} from "./calculator/calculator.component";
 import {APP_ROUTES_PROVIDER} from "./app-routes";
+import {LoanTablesComponent} from './loan-tables/loan-tables.component';
+import {DataService} from "./data-service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    LoanTablesComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import {APP_ROUTES_PROVIDER} from "./app-routes";
     HttpModule,
     APP_ROUTES_PROVIDER
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
