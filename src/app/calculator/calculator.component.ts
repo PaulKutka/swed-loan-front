@@ -1,8 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {LoanTablesComponent} from "../loan-tables/loan-tables.component";
-import {PaymentsCalculated} from "./paymentsCalculated";
 import {Payment} from "./payment";
-import {DataService} from "../data-service";
+import {PaymentsCalculated} from "./paymentsCalculated";
 
 @Component({
   selector: 'app-calculator',
@@ -15,17 +13,25 @@ export class CalculatorComponent implements OnInit {
   loanSum: number;
   loanTime: number;
 
-  constructor(private DataService: DataService) {
+  loanArray: Payment[] = [];
+
+  incomeAmountPerson: number;
+  incomeAmountSpouse: number;
+
+  constructor() {
     setTimeout(() => this.loanSum = 500);
     setTimeout(() => this.loanTime = 1);
+
+    setTimeout(() => this.incomeAmountPerson = 500);
+    setTimeout(() => this.incomeAmountSpouse = 500);
   }
 
   ngOnInit() {
   }
 
-  calculatePayments(): void{
-    this.DataService.setCalculatedPayments(this.loanSum, this.loanTime);
-    new LoanTablesComponent(this.DataService).populatePayments();
+  calculatePayments(): void {
+    this.loanArray = new PaymentsCalculated(this.loanSum, this.loanTime).loanArray;
+    console.log(this.loanArray);
   }
 
 }

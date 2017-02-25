@@ -4,7 +4,7 @@ export class Payment {
   private _leftSum: string;
   private _monthlySum: string;
   private _monthlyInterestSum: string;
-  usualServiceSum: number = 0.70;
+  private _usualServiceSum: number = 0.70;
 
   constructor(monthNumber: number, leftSum: string, monthlySum: string, monthlyInterestSum: string) {
     this._monthNumber = monthNumber;
@@ -43,6 +43,14 @@ export class Payment {
 
   set monthlyInterestSum(value: string) {
     this._monthlyInterestSum = value;
+  }
+
+  get usualServiceSum(): number {
+    return this._usualServiceSum;
+  }
+
+  set usualServiceSum(value: number) {
+    this._usualServiceSum = value;
   }
 
 }

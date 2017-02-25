@@ -76,3 +76,8 @@ body::before, #footer::before {
 .hidden-tables{
   display: none;
 }
+
+/* HARDCODED AS HELL! LOL*/
+th{
+  text-align: center;
+}

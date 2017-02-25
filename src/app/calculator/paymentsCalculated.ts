@@ -1,24 +1,20 @@
 import {Payment} from "./payment";
-/**
- * Created by Tomas on 2/25/2017.
- */
 
 export class PaymentsCalculated {
+
   loanSum: number;
   loanTime: number;
 
+  private _loanArray: Payment[] = [];
 
-  constructor(loanSum, loanTime) {
+  constructor(loanSum:number,loanTime:number) {
     this.loanSum = loanSum;
     this.loanTime = loanTime;
-
-
+    this._loanArray = this.calculateLoanDetails();
   }
 
   calculateLoanDetails(): Array<Payment>{
-
     return this.loanInformation(this.loanSum, this.loanTime);
-
   }
 
   loanInformation(loanSum: number, loanTime: number): Array<Payment> {
@@ -41,7 +37,15 @@ export class PaymentsCalculated {
   private calculatePayment(currentMonth: number, leftSum: number,
                            monthlySum: number, monthlyInterestRate: number): Payment {
 
-    return new Payment(currentMonth + 1,
+    return new Payment(currentMonth,
       leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2));
+  }
+
+  get loanArray(): Payment[] {
+    return this._loanArray;
+  }
+
+  set loanArray(value: Payment[]) {
+    this._loanArray = value;
   }
 }

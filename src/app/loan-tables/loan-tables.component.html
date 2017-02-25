@@ -1,12 +1,13 @@
-<form method="post" action="" class="form form-border">
+<div class="form form-border">
   <h3>Preliminarus paskolos paskaičiavimas</h3>
   <hr>
   <br>
 
+
   <table>
     <thead>
     <tr>
-      <th>Mėnesis</th>
+      <th >Mėnesis</th>
       <th>Likusi suma</th>
       <th>Mėnesinė įmoka</th>
       <th>Mėnesinė palūkanų įmoka</th>
@@ -14,19 +15,23 @@
     </tr>
     </thead>
     <tbody>
-    <span *ngIf="loanArray.length > 0">
-      <tr *ngFor="let payment of loanArray">
-      <th>{{payment.monthNumber}}</th>
+    <tr *ngFor="let payment of loanArrayOutput">
+      <th *ngIf='payment.monthNumber == 0'></th>
+      <th *ngIf='payment.monthNumber > 0'>{{payment.monthNumber}}</th>
+
       <th>{{payment.leftSum}}</th>
       <th>{{payment.monthlySum}}</th>
       <th>{{payment.monthlyInterestSum}}</th>
-      <th>???</th>
+
+      <th *ngIf='payment.monthNumber == 0'>{{payment.usualServiceSum}}</th>
+      <th *ngIf='payment.monthNumber > 0'></th>
     </tr>
-    </span>
+
+
     </tbody>
   </table>
 
   <div class="form-item">
-    <button type="submit">Pildyti paraiškas</button>
+    <button>Pildyti paraiškas</button>
   </div>
-</form>
+</div>

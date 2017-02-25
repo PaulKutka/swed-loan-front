@@ -1,5 +1,3 @@
-<!--<input [(ngModel)]="loanSum" type="text" (click)="someMethod()">-->
-
 <div class="form form-border">
   <h4>Informacija apie jūsų pageidaujamą paskolą</h4>
 
@@ -38,61 +36,62 @@
     </div>
   </div>
 
+
+
+
+<div class="row gutters text-right">
+  <div class="col col-4">
+    <p>Paskolą imsiu</p>
+  </div>
+  <div class="col col-6">
+    <div class="form-item form-checkboxes text-left">
+      <label class="checkbox"><input value="alone" type="radio" name="loan-type"> Vienas</label>
+      <label class="checkbox"><input value="spouse" type="radio" name="loan-type"> Su sutuoktiniu (bendraskoliu)</label>
+    </div>
+  </div>
+</div>
+
+<hr>
+<h4>Informacija apie jūsų pajamas</h4>
+
+<div class="row gutters text-right">
+  <div class="col col-4">
+    <p>Jūsų grynosios mėnesio pajamos</p>
+  </div>
+  <div class="col col-6">
+    <input value="{{incomeAmountPerson}}" type='range' min="500" max="10000" step="50" [(ngModel)]="incomeAmountPerson">
+  </div>
+  <div class="col col-2">
+    <div class="form-item">
+      <div class="append">
+        <input value="{{incomeAmountPerson}}" [(ngModel)]="incomeAmountPerson" class="mozilla-fix noMonth" type="number">
+        <span>Eur/Mėn</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="extraInfoSpouse row gutters text-right hidden">
+  <div class="col col-4">
+    <p>Sutuoktinio (bendraskolio) grynosios mėnesio pajamos</p>
+  </div>
+  <div class="col col-6">
+    <input value="{{incomeAmountSpouse}}" type='range' min="500" max="10000" step="50" [(ngModel)]="incomeAmountSpouse">
+  </div>
+  <div class="col col-2">
+    <div class="form-item">
+      <div class="append">
+        <input value="{{incomeAmountSpouse}}" [(ngModel)]="incomeAmountSpouse" class="mozilla-fix noMonth" type="number">
+        <span>Eur/Mėn</span>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="form-item">
     <button (click)="calculatePayments()">Skaičiuoti</button>
   </div>
 
 </div>
-<!--<div class="row gutters text-right">-->
-<!--<div class="col col-4">-->
-<!--<p>Paskolą imsiu</p>-->
-<!--</div>-->
-<!--<div class="col col-6">-->
-<!--<div class="form-item form-checkboxes text-left">-->
-<!--<label class="checkbox"><input value="alone" type="radio" name="loan-type"> Vienas</label>-->
-<!--<label class="checkbox"><input value="spouse" type="radio" name="loan-type"> Su sutuoktiniu (bendraskoliu)</label>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
 
-<!--<hr>-->
-<!--<h4>Informacija apie jūsų pajamas</h4>-->
-
-<!--<div class="row gutters text-right">-->
-<!--<div class="col col-4">-->
-<!--<p>Jūsų grynosios mėnesio pajamos</p>-->
-<!--</div>-->
-<!--<div class="col col-6">-->
-<!--<input type='range' min="245" max="10000" step="5" >-->
-<!--</div>-->
-<!--<div class="col col-2">-->
-<!--<div class="form-item">-->
-<!--<div class="append">-->
-<!--<input  class="mozilla-fix hasMonth" type="number"><span>Eur/mėn</span>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--<div class="extraInfoSpouse row gutters text-right hidden">-->
-<!--<div class="col col-4">-->
-<!--<p>Sutuoktinio (bendraskolio) grynosios mėnesio pajamos</p>-->
-<!--</div>-->
-<!--<div class="col col-6">-->
-<!--<input type='range' min="245" max="10000" step="5"  >-->
-<!--</div>-->
-<!--<div class="col col-2">-->
-<!--<div class="form-item">-->
-<!--<div class="append">-->
-<!--<input class="mozilla-fix hasMonth" type="number"><span>Eur/mėn</span>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--<div class="form-item">-->
-<!--<button (click)="someMethod()" >Skaičiuoti {{loanSum}}</button>-->
-<!--</div>-->
-
-<!--</div>-->
-<app-loan-tables ></app-loan-tables>
+<app-loan-tables [loanArrayOutput]="loanArray"></app-loan-tables>
