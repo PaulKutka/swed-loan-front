@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Payment} from "./payment";
 import {PaymentsCalculated} from "./paymentsCalculated";
 
@@ -15,9 +15,15 @@ export class CalculatorComponent implements OnInit {
 
   loanArray: Payment[] = [];
 
+  incomeAmountPerson: number;
+  incomeAmountSpouse: number;
+
   constructor() {
     setTimeout(() => this.loanSum = 500);
     setTimeout(() => this.loanTime = 1);
+
+    setTimeout(() => this.incomeAmountPerson = 500);
+    setTimeout(() => this.incomeAmountSpouse = 500);
   }
 
   ngOnInit() {
