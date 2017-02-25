@@ -1,28 +1,23 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, Input} from "@angular/core";
 import {Payment} from "../calculator/payment";
-import {DataService} from "../data-service";
 
 @Component({
   selector: 'app-loan-tables',
   templateUrl: './loan-tables.component.html',
-  styleUrls: ['./loan-tables.component.css']
+  styleUrls: ['./loan-tables.component.css'],
+  inputs:['loanArrayOutput']
 })
 
-export class LoanTablesComponent implements OnInit{
+export class LoanTablesComponent implements OnInit {
 
-  loanArray: Payment[] = [];
+  @Input('loanArrayOutput')
+  loanArrayOutput:Payment[];
 
-  constructor(private DataService: DataService){
-
-  }
-
-  ngOnInit(){
+  constructor( ) {
 
   }
 
-  populatePayments(){
-    this.loanArray = this.DataService.getCalculatedPayments();
-    console.log(this.loanArray);
+  ngOnInit() {
   }
 
 }

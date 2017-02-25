@@ -1,5 +1,3 @@
-<!--<input [(ngModel)]="loanSum" type="text" (click)="someMethod()">-->
-
 <div class="form form-border">
   <h4>Informacija apie jūsų pageidaujamą paskolą</h4>
 
@@ -95,4 +93,4 @@
 <!--</div>-->
 
 <!--</div>-->
-<app-loan-tables ></app-loan-tables>
+<app-loan-tables [loanArrayOutput]="loanArray"></app-loan-tables>

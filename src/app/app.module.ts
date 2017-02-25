@@ -7,7 +7,6 @@ import {AppComponent} from "./app.component";
 import {CalculatorComponent} from "./calculator/calculator.component";
 import {APP_ROUTES_PROVIDER} from "./app-routes";
 import {LoanTablesComponent} from './loan-tables/loan-tables.component';
-import {DataService} from "./data-service";
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import {DataService} from "./data-service";
     HttpModule,
     APP_ROUTES_PROVIDER
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
