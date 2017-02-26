@@ -11,7 +11,7 @@
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input value="{{loanSum}}" [(ngModel)]="loanSum" class="mozilla-fix noMonth" type="number"><span>Eur</span>
+          <input value="{{loanSum}}" [(ngModel)]="loanSum" class="mozilla-fix noMonth requiredLoan" type="number"><span>Eur</span>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input value="{{loanTime}}" [(ngModel)]="loanTime" class="mozilla-fix noMonth" type="number"><span>Mėn</span>
+          <input value="{{loanTime}}" [(ngModel)]="loanTime" class="mozilla-fix noMonth minimumTime" type="number"><span>Mėn</span>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
   </div>
   <div class="col col-6">
     <div class="form-item form-checkboxes text-left">
-      <label class="checkbox"><input value="alone" type="radio" name="loan-type"> Vienas</label>
+      <label class="checkbox"><input value="alone" type="radio" name="loan-type" checked> Vienas</label>
       <label class="checkbox"><input value="spouse" type="radio" name="loan-type"> Su sutuoktiniu (bendraskoliu)</label>
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="col col-2">
     <div class="form-item">
       <div class="append">
-        <input value="{{incomeAmountPerson}}" [(ngModel)]="incomeAmountPerson" class="mozilla-fix noMonth" type="number">
+        <input value="{{incomeAmountPerson}}" [(ngModel)]="incomeAmountPerson" class="mozilla-fix noMonth minimumPay" type="number">
         <span>Eur/Mėn</span>
       </div>
     </div>
@@ -81,7 +81,7 @@
   <div class="col col-2">
     <div class="form-item">
       <div class="append">
-        <input value="{{incomeAmountSpouse}}" [(ngModel)]="incomeAmountSpouse" class="mozilla-fix noMonth" type="number">
+        <input value="{{incomeAmountSpouse}}" [(ngModel)]="incomeAmountSpouse" class="mozilla-fix noMonth minimumPay" type="number">
         <span>Eur/Mėn</span>
       </div>
     </div>
