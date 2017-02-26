@@ -39,7 +39,7 @@ export class PaymentsCalculated {
                            monthlySum: number, monthlyInterestRate: number): Payment {
 
     return new Payment(currentMonth,
-      leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2));
+      leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2), "0.70");
   }
 
   get loanArray(): Payment[] {
