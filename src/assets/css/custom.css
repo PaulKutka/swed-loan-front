@@ -124,6 +124,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 /**/
-.col.col-4{
-  margin: 10px 0 0 0 ;
+.slider .col.col-4 p{
+  margin: 10px 0 0 0!important;
 }
