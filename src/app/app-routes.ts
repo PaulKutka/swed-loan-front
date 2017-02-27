@@ -2,6 +2,7 @@ import {Routes, RouterModule} from "@angular/router";
 import {FormComponent} from "./form/form.component";
 import {CalculatorComponent} from "./calculator/calculator.component";
 import {LoanTablesComponent} from "./loan-tables/loan-tables.component";
+import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
 
 const APP_ROUTES: Routes = [
   {
@@ -15,6 +16,10 @@ const APP_ROUTES: Routes = [
   {
     path: 'formCompletion',
     component: FormComponent
+  },
+  {
+    path: 'adminPanel',
+    component: AdminPanelComponent
   }
 ];
 
