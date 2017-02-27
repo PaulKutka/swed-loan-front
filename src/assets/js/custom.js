@@ -5,14 +5,27 @@ $('input[name="loan-type"]').on('change', function (event) {
   $('.extraInfoSpouse').toggleClass('hidden', !hasSpouse);
 }).change();
 
-// $('.documentCodeInput').on('change', function(){
-//   var input = $(this).val();
-//   console.log(input.length);
-//   if(input.length < 11 ) {
-//
-//     var allInputs = document.querySelectorAll('.documentCodeError');
-//     console.log(allInputs);
-//     allInputs.toggleClass('error');
-//     return false;
-//   }
-// });
+// pakeisiu
+$("body").delegate('.requiredLoan', 'focusout', function(){
+  if($(this).val() < 500){
+    $(this).val('500');
+  }
+});
+
+$("body").delegate('.minimumPay', 'focusout', function(){
+  if($(this).val() < 245){
+    $(this).val('245');
+  }
+});
+
+$("body").delegate('.minimumTime', 'focusout', function(){
+  if($(this).val() < 3){
+    $(this).val('3');
+  }
+});
+
+
+
+$('.calculateButton').click(function(){
+  $('.app-loan-tables').removeClass('hidden');
+});
