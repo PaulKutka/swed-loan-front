@@ -27,5 +27,5 @@ $("body").delegate('.minimumTime', 'focusout', function(){
 
 
 $('.calculateButton').click(function(){
-  $('.app-loan-tables').toggleClass('hidden');
+  $('.app-loan-tables').removeClass('hidden');
 });
