@@ -5,12 +5,13 @@ import {Payment} from "../calculator/payment";
   selector: 'app-loan-tables',
   templateUrl: './loan-tables.component.html',
   styleUrls: ['./loan-tables.component.css'],
-  inputs:['loanArrayOutput']
+  inputs:['loanArrayOutput','loanSumOutput']
 })
 
 export class LoanTablesComponent implements OnInit {
 
   @Input('loanArrayOutput') loanArrayOutput:Payment[];
+  @Input('loanSumOutput') loanSumOutput:number;
 
   constructor( ) {
 

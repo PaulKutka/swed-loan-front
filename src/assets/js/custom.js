@@ -7,7 +7,7 @@ $('input[name="loan-type"]').on('change', function (event) {
 
 // pakeisiu
 $("body").delegate('.requiredLoan', 'focusout', function(){
-  if($(this).val() < 500){
+  if($(this).val() < 245){
     $(this).val('245');
   }
 });
@@ -22,4 +22,10 @@ $("body").delegate('.minimumTime', 'focusout', function(){
   if($(this).val() < 1){
     $(this).val('1');
   }
+});
+
+
+
+$('.calculateButton').click(function(){
+  $('.app-loan-tables').toggleClass('hidden');
 });

@@ -6,7 +6,7 @@
       <p>Pageidaujama paskolos suma</p>
     </div>
     <div class="col col-6">
-      <input value="{{loanSum}}" type='range' min="500" max="58000" step="500" [(ngModel)]="loanSum">
+      <input value="{{loanSum}}" type='range' min="245" max="58000" [(ngModel)]="loanSum">
     </div>
     <div class="col col-2">
       <div class="form-item">
@@ -89,9 +89,9 @@
 </div>
 
   <div class="form-item">
-    <button (click)="calculatePayments()">Skaičiuoti</button>
+    <button class="calculateButton" (click)="calculatePayments()">Skaičiuoti</button>
   </div>
 
 </div>
 
-<app-loan-tables [loanArrayOutput]="loanArray"></app-loan-tables>
+<app-loan-tables class="app-loan-tables hidden" [loanArrayOutput]="loanArray" [loanSumOutput]="loanSum"></app-loan-tables>
