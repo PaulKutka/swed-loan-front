@@ -11,17 +11,20 @@
       <th>Likusi suma</th>
       <th>Mėnesinė įmoka</th>
       <th>Mėnesinė palūkanų įmoka</th>
-      <th>Sutarties administravimo mokestis</th>
+      <th>Sutarties mokestis</th>
     </tr>
     </thead>
     <tbody>
-    <tr></tr>
     <tr *ngFor="let payment of loanArrayOutput">
-      <th>{{payment.monthNumber}}</th>
+      <th *ngIf='payment.monthNumber == 0'></th>
+      <th *ngIf='payment.monthNumber > 0'>{{payment.monthNumber}}</th>
+
       <th>{{payment.leftSum}}</th>
       <th>{{payment.monthlySum}}</th>
       <th>{{payment.monthlyInterestSum}}</th>
-      <th>{{payment.usualServiceSum}}</th>
+
+      <th *ngIf='payment.monthNumber == 0'>{{payment.usualServiceSum}}</th>
+      <th *ngIf='payment.monthNumber > 0'></th>
     </tr>
 
 
