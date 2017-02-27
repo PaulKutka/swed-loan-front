@@ -6,7 +6,7 @@
       <p>Pageidaujama paskolos suma</p>
     </div>
     <div class="col col-6">
-      <input value="{{loanSum}}" type='range' min="245" max="58000" [(ngModel)]="loanSum">
+      <input value="{{loanSum}}" type='range' min="500" max="58000" [(ngModel)]="loanSum">
     </div>
     <div class="col col-2">
       <div class="form-item">
@@ -24,7 +24,7 @@
       <p>Paskolos laikotarpis</p>
     </div>
     <div class="col col-6">
-      <input value="{{loanTime}}" type='range' min="1" max="60" step="1" [(ngModel)]="loanTime">
+      <input value="{{loanTime}}" type='range' min="3" max="60" step="1" [(ngModel)]="loanTime">
     </div>
     <div class="col col-2">
       <div class="form-item">
@@ -59,7 +59,7 @@
     <p>Jūsų grynosios mėnesio pajamos</p>
   </div>
   <div class="col col-6">
-    <input value="{{incomeAmountPerson}}" type='range' min="500" max="10000" step="50" [(ngModel)]="incomeAmountPerson">
+    <input value="{{incomeAmountPerson}}" type='range' min="245" max="10000" step="50" [(ngModel)]="incomeAmountPerson">
   </div>
   <div class="col col-2">
     <div class="form-item">
@@ -76,7 +76,7 @@
     <p>Sutuoktinio (bendraskolio) grynosios mėnesio pajamos</p>
   </div>
   <div class="col col-6">
-    <input value="{{incomeAmountSpouse}}" type='range' min="500" max="10000" step="50" [(ngModel)]="incomeAmountSpouse">
+    <input value="{{incomeAmountSpouse}}" type='range' min="0" max="10000" step="50" [(ngModel)]="incomeAmountSpouse">
   </div>
   <div class="col col-2">
     <div class="form-item">
