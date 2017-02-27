@@ -7,13 +7,15 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {APP_ROUTES_PROVIDER} from "./app-routes";
 import {FormComponent} from "./form/form.component";
+import { LoanStatusComponent } from './loan-status/loan-status.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
     LoanTablesComponent,
-    FormComponent
+    FormComponent,
+    LoanStatusComponent
   ],
   imports: [
     BrowserModule,
