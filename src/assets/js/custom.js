@@ -4,3 +4,4 @@ $('input[name="loan-type"]').on('change', function (event) {
     hasSpouse = radioButton.val() === 'spouse' && radioButton.prop('checked');
   $('.extraInfoSpouse').toggleClass('hidden', !hasSpouse);
 }).change();
+
