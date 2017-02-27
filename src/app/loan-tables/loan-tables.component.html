@@ -3,28 +3,25 @@
   <hr>
   <br>
 
-  <h4>Sutarties sudarymo mokestis: {{loanSumOutput * 0.015}}</h4>
+  <h4>Sutarties sudarymo mokestis: {{(loanSumOutput * 0.015).toFixed(2)}}</h4>
   <table>
     <thead>
     <tr>
       <th>Mėnesis</th>
       <th>Likusi suma</th>
       <th>Mėnesinė įmoka</th>
-      <th>Mėnesinė palūkanų įmoka</th>
-      <th>Sutarties mokestis</th>
+      <th>Mėnesinė palūkanų suma</th>
+      <th>Sutarties administravimo mokestis</th>
     </tr>
     </thead>
     <tbody>
+    <tr></tr>
     <tr *ngFor="let payment of loanArrayOutput">
-      <th *ngIf='payment.monthNumber == 0'></th>
-      <th *ngIf='payment.monthNumber > 0'>{{payment.monthNumber}}</th>
-
+      <th>{{payment.monthNumber}}</th>
       <th>{{payment.leftSum}}</th>
       <th>{{payment.monthlySum}}</th>
       <th>{{payment.monthlyInterestSum}}</th>
-
-      <th *ngIf='payment.monthNumber == 0'>{{payment.usualServiceSum}}</th>
-      <th *ngIf='payment.monthNumber > 0'></th>
+      <th>{{payment.usualServiceSum}}</th>
     </tr>
 
 
@@ -32,6 +29,7 @@
   </table>
 
   <div class="form-item">
-    <button>Pildyti paraiškas</button>
+    <button [routerLink]="['/formCompletion']">Pildyti paraišką</button>
   </div>
 </div>
+<router-outlet></router-outlet>
