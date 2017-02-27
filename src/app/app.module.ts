@@ -7,12 +7,14 @@ import {AppComponent} from "./app.component";
 import {CalculatorComponent} from "./calculator/calculator.component";
 import {APP_ROUTES_PROVIDER} from "./app-routes";
 import {LoanTablesComponent} from './loan-tables/loan-tables.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
-    LoanTablesComponent
+    LoanTablesComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
