@@ -86,15 +86,17 @@
   </div>
 
   <!-- Asmens kodas-->
-  <div class="row gutters">
+  <div class="row gutters ">
     <div class="col col-4 text-right">
       <div class="form-item">
         <label>Asmens kodas <span class="req">*</span></label>
+        <span class="documentCodeError">Prašau įvesti teisingus duomenis</span>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <!-- error class for incorrect input - length == 11 -->
+        <input type="number" class="documentCodeInput documentCodeError">
       </div>
     </div>
   </div>
@@ -173,7 +175,7 @@
     </div>
   </div>
 
-  <!-- Telefonas 1-->
+  <!-- Telefonas -->
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
@@ -188,20 +190,6 @@
     </div>
   </div>
 
-  <!-- Telefonas 2-->
-  <div class="row gutters">
-    <div class="col col-4 text-right">
-      <div class="form-item">
-        <label>Telefonas 2 </label>
-      </div>
-    </div>
-    <div class="col col-1">
-      <select><option>+370</option></select>
-    </div>
-    <div class="col col-2">
-      <input type="text" name="" value="">
-    </div>
-  </div>
 
   <!-- El.paštas -->
   <div class="row gutters">
