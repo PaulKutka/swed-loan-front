@@ -50,6 +50,14 @@
       <td>2017-05-01</td>
     </tr>
 
+    <tr *ngFor="let list of adminPanels">
+      <td>{{list.loan_amount}}</td>
+      <td>{{list.client_name}}</td>
+      <td>{{list.status}}</td>
+      <td>{{list.loan_term}}</td>
+    </tr>
+
+
     </tbody>
   </table>
 
