@@ -33,7 +33,6 @@ export class CalculatorComponent implements OnInit {
     if(this.loanSum < 500){this.loanSum = 500}
     if(this.loanTime < 3){this.loanTime = 3}
     this.loanArray = new PaymentsCalculated(this.loanSum, this.loanTime).loanArray;
-    console.log(this.loanArray);
   }
 
 }

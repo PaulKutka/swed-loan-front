@@ -1,3 +1,5 @@
+
+
 $('input[name="loan-type"]').on('change', function (event) {
   var radioButton = $(event.currentTarget),
 
@@ -24,8 +26,6 @@ $("body").delegate('.minimumTime', 'focusout', function(){
   }
 });
 
-
-
-$('.calculateButton').click(function(){
-  $('app-loan-tables').removeClass('hidden-tables');
-});
+function showTables() { 
+    $('app-loan-tables').removeClass('hidden-tables');
+}
