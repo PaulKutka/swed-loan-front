@@ -1,12 +1,4 @@
-<form class="form form-border" (ngSubmit)="onSubmit()">
-
-
-  <nav class="breadcrumbs">
-    <ul>
-      <li><a [routerLink]="['/']">Skaičiuoklė</a></li>
-      <li><span>Formos pildymas</span></li>
-    </ul>
-  </nav>
+<form class="form form-border">
 
   <h4 class="text-left">Asmens duomenys</h4>
   <hr>
@@ -21,7 +13,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="text">
+        <input type="number" min="500" max="58000" step="500" #sum>
       </div>
     </div>
   </div>
@@ -34,16 +26,10 @@
       </div>
     </div>
 
-    <div class="col col-2">
-      <div class="form-item">
-        <select><option>---</option></select>
-        <div class="desc">metai</div>
-      </div>
-    </div>
 
     <div class="col col-2">
       <div class="form-item">
-        <select><option>---</option></select>
+        <input type="number" min="3" max="60" #term>
         <div class="desc">mėnesiai</div>
       </div>
     </div>
@@ -58,7 +44,7 @@
     </div>
     <div class="col col-1">
       <div class="form-item">
-        <input type="number">
+        <input type="number" min="1" max="28" #payDay>
       </div>
     </div>
   </div>
@@ -74,7 +60,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <input type="text" #name>
       </div>
     </div>
   </div>
@@ -88,7 +74,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <input type="text" #surName>
       </div>
     </div>
   </div>
@@ -102,7 +88,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number">
+        <input type="text" maxlength="11" #personalCode>
       </div>
     </div>
   </div>
@@ -116,7 +102,12 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select><option>---</option></select>
+        <select #documentType>
+          <option>Pasas</option>
+          <option>Tapatybės kortelė</option><
+          <option>Leidimas gyventi Lietuvoje</option><
+        </select>
+
       </div>
     </div>
   </div>
@@ -125,12 +116,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Dokumento numeirs <span class="req">*</span></label>
+        <label>Dokumento numeris <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <input type="text" maxlength="8" #documentNumber>
       </div>
     </div>
   </div>
@@ -148,7 +139,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select id="down">
+        <select id="down" #country>
           <option value="lt">Lietuva</option>
           <option value="ln">Lenkija</option>
         </select>
@@ -156,21 +147,21 @@
     </div>
   </div>
 
-  <!-- Miestas ar apskritis-->
+  <!-- Miestas-->
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Miestas ar apskritis <span class="req">*</span></label>
+        <label>Miestas <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item " >
-        <select id="down2">
+        <select id="down2" #city>
           <option value="vilnius">Vilnius</option>
           <option value="kaunas">Kaunas</option>
         </select>
-      </div>
     </div>
+  </div>
   </div>
 
   <!-- Adresas-->
@@ -182,7 +173,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="" value="">
+        <input type="string text" name="" value="" #address>
       </div>
     </div>
   </div>
@@ -191,14 +182,14 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Telefonas 1 <span class="req">*</span></label>
+        <label>Telefonas <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-1">
       <select><option>+370</option></select>
     </div>
     <div class="col col-2">
-      <input type="text" name="" value="">
+      <input type="text" max="9" name="" value="" #phoneNumber>
     </div>
   </div>
 
@@ -212,7 +203,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="email" name="" value="">
+        <input type="email" name="" value="" #email>
       </div>
     </div>
   </div>
@@ -226,7 +217,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="text" name="" value="">
+        <input type="number" min="245" step="5" name="" value="" #monthlySalary>
       </div>
     </div>
   </div>
@@ -234,7 +225,21 @@
   <div class="form-item">
     <label><br></label>
     <button data-component="modal" data-target="#confirmation-modal">Išsaugoti vėlesniam užbaigimui</button>
-    <button data-component="modal" data-target="#confirmation-modal">Pateikti</button>
+    <button data-component="modal" data-target="#confirmation-modal"
+            (click)="onSubmit(
+            sum.value,
+            term.value,
+            payDay.value,
+            name.value,
+            surName.value,
+            personalCode.value,
+            documentType.value,
+            documentNumber.value,
+            country.value,
+            city.value,
+            address.value,
+            phoneNumber.value,
+            email.value)">Pateikti</button>
   </div>
 
 </form>
