@@ -13,7 +13,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="text">
+        <input type="number" min="500" max="58000" step="500">
       </div>
     </div>
   </div>
@@ -26,16 +26,10 @@
       </div>
     </div>
 
-    <div class="col col-2">
-      <div class="form-item">
-        <select><option>---</option></select>
-        <div class="desc">metai</div>
-      </div>
-    </div>
 
     <div class="col col-2">
       <div class="form-item">
-        <select><option>---</option></select>
+        <input type="number" min="3" max="60">
         <div class="desc">mėnesiai</div>
       </div>
     </div>
@@ -50,7 +44,7 @@
     </div>
     <div class="col col-1">
       <div class="form-item">
-        <input type="number">
+        <input type="number" min="1" max="28">
       </div>
     </div>
   </div>
@@ -94,7 +88,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number">
+        <input type="text" maxlength="11">
       </div>
     </div>
   </div>
@@ -108,7 +102,12 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select><option>---</option></select>
+        <select>
+          <option>Pasas</option>
+          <option>Tapatybės kortelė</option><
+          <option>Leidimas gyventi Lietuvoje</option><
+        </select>
+
       </div>
     </div>
   </div>
@@ -117,12 +116,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Dokumento numeirs <span class="req">*</span></label>
+        <label>Dokumento numeris <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <input type="text" maxlength="8">
       </div>
     </div>
   </div>
@@ -140,21 +139,29 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select><option>Lietuva</option></select>
+        <select>
+          <option>Lietuva</option>
+          <option>Latvija</option>
+          <option>Lenkija</option>
+        </select>
       </div>
     </div>
   </div>
 
-  <!-- Miestas ar apskritis-->
+  <!-- Miestas-->
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Miestas ar apskritis <span class="req">*</span></label>
+        <label>Miestas <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select><option>---</option></select>
+        <select>
+          <option>Vilnius</option>
+          <option>Kaunas</option>
+          <option>Klaipėda</option>
+        </select>
       </div>
     </div>
   </div>
@@ -168,7 +175,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="" value="">
+        <input type="string text" name="" value="">
       </div>
     </div>
   </div>
@@ -177,14 +184,13 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Telefonas 1 <span class="req">*</span></label>
+        <label>Telefonas <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-1">
-      <select><option>+370</option></select>
     </div>
     <div class="col col-2">
-      <input type="text" name="" value="">
+      <input type="text" max="9" name="" value="">
     </div>
   </div>
 
@@ -212,7 +218,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="text" name="" value="">
+        <input type="number" min="245" step="5" name="" value="">
       </div>
     </div>
   </div>
