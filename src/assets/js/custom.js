@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
 
   $('input[name="loan-type"]').on('change', function (event) {
@@ -44,5 +43,3 @@ function showTables() {
     });
     $('#down2').html(locationString);
   });
-
-});
