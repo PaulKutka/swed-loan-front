@@ -1,6 +1,13 @@
 <div id="hero">
-  <h3>Vartojimo paskolos skaičiuoklė
+  <h3>{{ 'HOME.TITLE' | translate }}
     <img class="logo" src="assets/images/logo.jpg" alt="Swedbank logotype">
   </h3>
 </div>
+
 <router-outlet></router-outlet>
+
+<select id="langSelect" #langSelect (change)="translate.use(langSelect.value)">
+  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+</select>
+
+

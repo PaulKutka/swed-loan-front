@@ -1,24 +1,21 @@
 import {Payment} from "./payment";
-/**
- * Created by Tomas on 2/25/2017.
- */
+import {NULL_EXPR} from "@angular/compiler/src/output/output_ast";
 
 export class PaymentsCalculated {
+
   loanSum: number;
   loanTime: number;
 
+  private _loanArray: Payment[] = [];
 
-  constructor(loanSum, loanTime) {
+  constructor(loanSum:number,loanTime:number) {
     this.loanSum = loanSum;
     this.loanTime = loanTime;
-
-
+    this._loanArray = this.calculateLoanDetails();
   }
 
   calculateLoanDetails(): Array<Payment>{
-
     return this.loanInformation(this.loanSum, this.loanTime);
-
   }
 
   loanInformation(loanSum: number, loanTime: number): Array<Payment> {
@@ -29,10 +26,10 @@ export class PaymentsCalculated {
     let monthlyInterestRate: number = 0.16 / 12;
 
     let monthlySum: number = ((loanSum * monthlyInterestRate) /
-      (1 - Math.pow((1 + monthlyInterestRate), (-1 * loanTime)))) + 0.7;
+      (1 - Math.pow((1 + monthlyInterestRate), (-1 * loanTime))));
 
     for (let currentMonth: number = 0; currentMonth < loanTime; currentMonth++) {
-      paymentList.push(this.calculatePayment(currentMonth, leftSum, monthlySum, monthlyInterestRate));
+      paymentList.push(this.calculatePayment(currentMonth+1, leftSum, monthlySum+0.70, monthlyInterestRate));
       leftSum = leftSum - (monthlySum - (leftSum * monthlyInterestRate));
     }
     return paymentList;
@@ -41,7 +38,19 @@ export class PaymentsCalculated {
   private calculatePayment(currentMonth: number, leftSum: number,
                            monthlySum: number, monthlyInterestRate: number): Payment {
 
-    return new Payment(currentMonth + 1,
-      leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2));
+    return new Payment(currentMonth,
+      leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2), "0.70");
+  }
+
+  private returnLoanSum() {
+    return this.loanSum;
+  }
+
+  get loanArray(): Payment[] {
+    return this._loanArray;
+  }
+
+  set loanArray(value: Payment[]) {
+    this._loanArray = value;
   }
 }

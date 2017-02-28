@@ -1,0 +1,270 @@
+<div class="form form-border">
+
+
+  <nav class="breadcrumbs">
+    <ul>
+      <li><a [routerLink]="['/']">Skaičiuoklė</a></li>
+      <li><span>Formos pildymas</span></li>
+    </ul>
+  </nav>
+
+  <h4 class="text-left">Asmens duomenys</h4>
+  <hr>
+  <br>
+
+  <!-- Paskolos suma-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Paskolos suma <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-2">
+      <div class="form-item">
+        <input type="number" min="500" max="58000" step="500" #sum>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paskolos terminas -->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Paskolos terminas <span class="req">*</span></label>
+      </div>
+    </div>
+
+
+    <div class="col col-2">
+      <div class="form-item">
+        <input type="number" min="3" max="60" #term>
+        <div class="desc">mėnesiai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paskolos uzpildymas-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Paskolos ir palūkanų mokėjimo diena <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-1">
+      <div class="form-item">
+        <input type="number" min="1" max="28" #payDay>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Vardas -->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Vardas <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <input type="text" #name>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pavarde-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Pavardė <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <input type="text" #surName>
+      </div>
+    </div>
+  </div>
+
+  <!-- Asmens kodas-->
+  <div class="row gutters ">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Asmens kodas <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <input type="text" maxlength="11" #personalCode>
+      </div>
+    </div>
+  </div>
+
+  <!-- Asmens dokumento tipas-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Asmens dokumento tipas <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <select #documentType>
+          <option>Pasas</option>
+          <option>Tapatybės kortelė</option><
+          <option>Leidimas gyventi Lietuvoje</option><
+        </select>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Asmens dokumento tipas-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Dokumento numeris <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <input type="text" maxlength="8" #documentNumber>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="text-left">Kontaktiniai duomenys</h4>
+  <hr>
+  <br>
+
+  <!-- Šalis-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Šalis <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <select #country>
+          <option>Lietuva</option>
+          <option>Latvija</option>
+          <option>Lenkija</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Miestas-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Miestas <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <select #city>
+          <option>Vilnius</option>
+          <option>Kaunas</option>
+          <option>Klaipėda</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adresas-->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Adresas<span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <input type="string text" name="" value="" #address>
+      </div>
+    </div>
+  </div>
+
+  <!-- Telefonas -->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Telefonas <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-1">
+    </div>
+    <div class="col col-2">
+      <input type="text" max="9" name="" value="" #phoneNumber>
+    </div>
+  </div>
+
+
+  <!-- El.paštas -->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>El.paštas <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-4">
+      <div class="form-item">
+        <input type="email" name="" value="" #email>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mėnesinis atlyginimas atskaičius mokesčius -->
+  <div class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label>Mėnesinis atlyginimas atskaičius mokesčius <span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-2">
+      <div class="form-item">
+        <input type="number" min="245" step="5" name="" value="" #monthlySalary>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-item">
+    <label><br></label>
+    <button data-component="modal" data-target="#confirmation-modal">Išsaugoti vėlesniam užbaigimui</button>
+    <button data-component="modal" data-target="#confirmation-modal"
+            (click)="onSubmit(
+            sum.value,
+            term.value,
+            payDay.value,
+            name.value,
+            surName.value,
+            personalCode.value,
+            documentType.value,
+            documentNumber.value,
+            country.value,
+            city.value,
+            address.value,
+            phoneNumber.value,
+            email.value)">Pateikti</button>
+  </div>
+
+</div>
+
+
+<!-- Confirmation modal-->
+<div id="confirmation-modal" class="modal-box hide">
+  <div class="modal">
+    <span class="close"></span>
+    <div class="modal-header">
+      <h3>Patvirtinimas</h3>
+    </div>
+    <div class="modal-body">
+      <h3>Kodas:
+        <span class="code">616813asd1a5</span>
+      </h3>
+    </div>
+  </div>
+</div>
