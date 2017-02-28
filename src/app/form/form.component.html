@@ -1,4 +1,4 @@
-<div class="form form-border">
+<form class="form form-border" (ngSubmit)="onSubmit()">
 
 
   <nav class="breadcrumbs">
@@ -148,7 +148,10 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select><option>Lietuva</option></select>
+        <select id="down">
+          <option value="lt">Lietuva</option>
+          <option value="ln">Lenkija</option>
+        </select>
       </div>
     </div>
   </div>
@@ -161,8 +164,11 @@
       </div>
     </div>
     <div class="col col-4">
-      <div class="form-item">
-        <select><option>---</option></select>
+      <div class="form-item " >
+        <select id="down2">
+          <option value="vilnius">Vilnius</option>
+          <option value="kaunas">Kaunas</option>
+        </select>
       </div>
     </div>
   </div>
@@ -231,7 +237,7 @@
     <button data-component="modal" data-target="#confirmation-modal">Pateikti</button>
   </div>
 
-</div>
+</form>
 
 
 <!-- Confirmation modal-->

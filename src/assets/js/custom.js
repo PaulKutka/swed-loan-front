@@ -1,6 +1,7 @@
+$(document).ready(function() {
 
 
-$('input[name="loan-type"]').on('change', function (event) {
+  $('input[name="loan-type"]').on('change', function (event) {
   var radioButton = $(event.currentTarget),
 
     hasSpouse = radioButton.val() === 'spouse' && radioButton.prop('checked');
@@ -29,3 +30,19 @@ $("body").delegate('.minimumTime', 'focusout', function(){
 function showTables() {
     $('app-loan-tables').removeClass('hidden-tables');
 }
+  var datajson = {
+    "lt": [ "Vilnius" , "Kaunas"],
+    "ln": ["Wilno","Gzegowc"]
+  };
+
+
+  $("#down").on('change', function () {
+    var locations = datajson[$(this).val()];
+    var locationString = '';
+    $.each(locations, function (i, item) {
+      locationString += '<option value="' + item + '">' + item + '</option>';
+    });
+    $('#down2').html(locationString);
+  });
+
+});
