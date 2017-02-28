@@ -89,11 +89,11 @@
 </div>
 
   <div class="form-item">
-    <button (click)="calculatePayments()">Skaičiuoti</button>
+    <button class="calculateButton" (click)="calculatePayments()">Skaičiuoti</button>
   </div>
 
 </div>
 
-<app-loan-tables [loanSumOutput]="loanSum" [loanArrayOutput]="loanArray"></app-loan-tables>
-<app-loan-status></app-loan-status>
+<app-loan-tables class="hidden-tables" [loanSumOutput]="loanSum" [loanArrayOutput]="loanArray"></app-loan-tables>
+<app-loan-status ></app-loan-status>
 <router-outlet></router-outlet>
