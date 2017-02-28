@@ -13,7 +13,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" step="500">
+        <input type="number" min="500" max="58000" step="500" #sum>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="3" max="60">
+        <input type="number" min="3" max="60" #term>
         <div class="desc">mėnesiai</div>
       </div>
     </div>
@@ -44,7 +44,7 @@
     </div>
     <div class="col col-1">
       <div class="form-item">
-        <input type="number" min="1" max="28">
+        <input type="number" min="1" max="28" #payDay>
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <input type="text" #name>
       </div>
     </div>
   </div>
@@ -74,7 +74,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text">
+        <input type="text" #surName>
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" maxlength="11">
+        <input type="text" maxlength="11" #personalCode>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select>
+        <select #documentType>
           <option>Pasas</option>
           <option>Tapatybės kortelė</option><
           <option>Leidimas gyventi Lietuvoje</option><
@@ -121,7 +121,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" maxlength="8">
+        <input type="text" maxlength="8" #documentNumber>
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select>
+        <select #country>
           <option>Lietuva</option>
           <option>Latvija</option>
           <option>Lenkija</option>
@@ -157,7 +157,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select>
+        <select #city>
           <option>Vilnius</option>
           <option>Kaunas</option>
           <option>Klaipėda</option>
@@ -175,7 +175,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="string text" name="" value="">
+        <input type="string text" name="" value="" #address>
       </div>
     </div>
   </div>
@@ -190,7 +190,7 @@
     <div class="col col-1">
     </div>
     <div class="col col-2">
-      <input type="text" max="9" name="" value="">
+      <input type="text" max="9" name="" value="" #phoneNumber>
     </div>
   </div>
 
@@ -204,7 +204,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="email" name="" value="">
+        <input type="email" name="" value="" #email>
       </div>
     </div>
   </div>
@@ -218,7 +218,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="245" step="5" name="" value="">
+        <input type="number" min="245" step="5" name="" value="" #monthlySalary>
       </div>
     </div>
   </div>
@@ -226,7 +226,21 @@
   <div class="form-item">
     <label><br></label>
     <button data-component="modal" data-target="#confirmation-modal">Išsaugoti vėlesniam užbaigimui</button>
-    <button data-component="modal" data-target="#confirmation-modal">Pateikti</button>
+    <button data-component="modal" data-target="#confirmation-modal"
+            (click)="onSubmit(
+            sum.value,
+            term.value,
+            payDay.value,
+            name.value,
+            surName.value,
+            personalCode.value,
+            documentType.value,
+            documentNumber.value,
+            country.value,
+            city.value,
+            address.value,
+            phoneNumber.value,
+            email.value)">Pateikti</button>
   </div>
 
 </div>
