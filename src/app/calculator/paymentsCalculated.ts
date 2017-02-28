@@ -42,6 +42,10 @@ export class PaymentsCalculated {
       leftSum.toFixed(2), monthlySum.toFixed(2), (leftSum * monthlyInterestRate).toFixed(2), "0.70");
   }
 
+  private returnLoanSum() {
+    return this.loanSum;
+  }
+
   get loanArray(): Payment[] {
     return this._loanArray;
   }

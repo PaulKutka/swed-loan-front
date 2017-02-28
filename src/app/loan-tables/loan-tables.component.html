@@ -4,6 +4,8 @@
   <br>
 
   <h4>Sutarties sudarymo mokestis: {{(loanSumOutput * 0.015).toFixed(2)}}</h4>
+  <h4>Sutarties administravmio mokestis: 0.7 €</h4>
+
   <table>
     <thead>
     <tr>
@@ -11,20 +13,16 @@
       <th>Likusi suma</th>
       <th>Mėnesinė įmoka</th>
       <th>Mėnesinė palūkanų suma</th>
-      <th>Sutarties administravimo mokestis</th>
     </tr>
     </thead>
     <tbody>
     <tr></tr>
     <tr *ngFor="let payment of loanArrayOutput">
       <th>{{payment.monthNumber}}</th>
-      <th>{{payment.leftSum}}</th>
-      <th>{{payment.monthlySum}}</th>
-      <th>{{payment.monthlyInterestSum}}</th>
-      <th>{{payment.usualServiceSum}}</th>
+      <th>{{payment.leftSum}} €</th>
+      <th>{{payment.monthlySum}} €</th>
+      <th>{{payment.monthlyInterestSum}} €</th>
     </tr>
-
-
     </tbody>
   </table>
 

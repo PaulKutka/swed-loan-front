@@ -14,6 +14,8 @@ export class Payment {
     this._usualServiceSum = usualServiceSum;
   }
 
+
+
   get monthNumber(): number {
     return this._monthNumber;
   }

@@ -26,6 +26,6 @@ $("body").delegate('.minimumTime', 'focusout', function(){
   }
 });
 
-function showTables() { 
+function showTables() {
     $('app-loan-tables').removeClass('hidden-tables');
 }
