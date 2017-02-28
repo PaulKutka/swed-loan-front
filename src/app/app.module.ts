@@ -4,11 +4,18 @@ import {CalculatorComponent} from "./calculator/calculator.component";
 import {LoanTablesComponent} from "./loan-tables/loan-tables.component";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
-import {HttpModule} from "@angular/http";
+import {HttpModule, Http} from "@angular/http";
 import {APP_ROUTES_PROVIDER} from "./app-routes";
 import {FormComponent} from "./form/form.component";
 import { LoanStatusComponent } from './loan-status/loan-status.component';
 import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
+import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+
+// AoT requires an exported function for factories
+export function createTranslateLoader(http: Http) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -23,9 +30,17 @@ import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
     BrowserModule,
     FormsModule,
     HttpModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [Http]
+      }
+    }),
+
     APP_ROUTES_PROVIDER
   ],
-  providers: [],
+  providers: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
