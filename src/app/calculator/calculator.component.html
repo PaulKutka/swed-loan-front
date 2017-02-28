@@ -1,12 +1,12 @@
 <div class="form form-border">
   <h4>Informacija apie jūsų pageidaujamą paskolą</h4>
 
-  <div class="row gutters text-right">
+  <div class="row gutters text-right slider">
     <div class="col col-4">
       <p>Pageidaujama paskolos suma</p>
     </div>
     <div class="col col-6">
-      <input value="{{loanSum}}" type='range' min="245" max="58000" [(ngModel)]="loanSum">
+      <input value="{{loanSum}}" type='range' min="500" max="58000" step="500" [(ngModel)]="loanSum">
     </div>
     <div class="col col-2">
       <div class="form-item">
@@ -19,12 +19,12 @@
   </div>
 
 
-  <div class="row gutters text-right">
+  <div class="row gutters text-right slider">
     <div class="col col-4">
       <p>Paskolos laikotarpis</p>
     </div>
     <div class="col col-6">
-      <input value="{{loanTime}}" type='range' min="1" max="60" step="1" [(ngModel)]="loanTime">
+      <input value="{{loanTime}}" type='range' min="3" max="60" step="1" [(ngModel)]="loanTime">
     </div>
     <div class="col col-2">
       <div class="form-item">
@@ -54,12 +54,12 @@
 <hr>
 <h4>Informacija apie jūsų pajamas</h4>
 
-<div class="row gutters text-right">
+<div class="row gutters text-right slider">
   <div class="col col-4">
     <p>Jūsų grynosios mėnesio pajamos</p>
   </div>
   <div class="col col-6">
-    <input value="{{incomeAmountPerson}}" type='range' min="500" max="10000" step="50" [(ngModel)]="incomeAmountPerson">
+    <input value="{{incomeAmountPerson}}" type='range' min="245" max="10000" [(ngModel)]="incomeAmountPerson">
   </div>
   <div class="col col-2">
     <div class="form-item">
@@ -71,12 +71,12 @@
   </div>
 </div>
 
-<div class="extraInfoSpouse row gutters text-right hidden">
+<div class="extraInfoSpouse row gutters text-right hidden slider">
   <div class="col col-4">
     <p>Sutuoktinio (bendraskolio) grynosios mėnesio pajamos</p>
   </div>
   <div class="col col-6">
-    <input value="{{incomeAmountSpouse}}" type='range' min="500" max="10000" step="50" [(ngModel)]="incomeAmountSpouse">
+    <input value="{{incomeAmountSpouse}}" type='range' min="245" max="10000" [(ngModel)]="incomeAmountSpouse">
   </div>
   <div class="col col-2">
     <div class="form-item">
@@ -89,9 +89,11 @@
 </div>
 
   <div class="form-item">
-    <button class="calculateButton"  (click)="calculatePayments()">Skaičiuoti</button>
+    <button (click)="calculatePayments()">Skaičiuoti</button>
   </div>
 
 </div>
 
-<app-loan-tables class="app-loan-tables hidden" [loanArrayOutput]="loanArray" [loanSumOutput]="loanSum"></app-loan-tables>
+<app-loan-tables [loanSumOutput]="loanSum" [loanArrayOutput]="loanArray"></app-loan-tables>
+<app-loan-status></app-loan-status>
+<router-outlet></router-outlet>

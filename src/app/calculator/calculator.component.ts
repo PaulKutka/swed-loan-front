@@ -10,20 +10,20 @@ import {PaymentsCalculated} from "./paymentsCalculated";
 
 export class CalculatorComponent implements OnInit {
 
-  loanSum: number;
-  loanTime: number;
+  loanSum: number = 0;
+  loanTime: number = 0;
 
   loanArray: Payment[] = [];
 
-  incomeAmountPerson: number;
-  incomeAmountSpouse: number;
+  incomeAmountPerson: number = 0;
+  incomeAmountSpouse: number = 0;
 
   constructor() {
-    setTimeout(() => this.loanSum = 245);
-    setTimeout(() => this.loanTime = 1);
+    setTimeout(() => this.loanSum = 500);
+    setTimeout(() => this.loanTime = 3);
 
-    setTimeout(() => this.incomeAmountPerson = 500);
-    setTimeout(() => this.incomeAmountSpouse = 500);
+    setTimeout(() => this.incomeAmountPerson = 245);
+    setTimeout(() => this.incomeAmountSpouse = 245);
   }
 
   ngOnInit() {
