@@ -7,7 +7,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule, Http} from "@angular/http";
 import {APP_ROUTES_PROVIDER} from "./app-routes";
 import {FormComponent} from "./form/form.component";
-import { LoanStatusComponent } from './loan-status/loan-status.component';
+import {LoanStatusComponent} from './loan-status/loan-status.component';
 import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
