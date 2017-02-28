@@ -25,7 +25,7 @@ export class FormService {
     email:string,
     ) {
     return this.http
-      .post("http://localhost:5050/loans/add", ({
+      .post("http://https://api-swed-loan.herokuapp.com/loans/add", ({
         "loan_amount": sum,
         "loan_term": term,
         "loan_payday": day,
