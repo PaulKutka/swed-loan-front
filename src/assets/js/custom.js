@@ -9,6 +9,18 @@ function radioButtonHide(){
 
 }
 
+function formHide(){
+  $(".form-hide").find('*').toggleClass("hidden");
+  $("#form").removeClass('formMain');
+  window.scrollTo(0,0);
+}
+
+function formUnHide() {
+  $(".form-hide").find('*').toggleClass("hidden");
+  $("#form").addClass('formMain');
+  window.scrollTo(0,0);
+}
+
 // pakeisiu
   $("body").delegate('.requiredLoan', 'focusout', function(){
     if($(this).val() < 500){

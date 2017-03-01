@@ -15,7 +15,7 @@ export class LoanTablesComponent implements OnInit {
   @Input('loanArrayOutput') loanArrayOutput: Payment[];
   @Input('loanSumOutput') loanSumOutput: number;
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
 

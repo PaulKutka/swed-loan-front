@@ -6,18 +6,6 @@ import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
 
 const APP_ROUTES: Routes = [
   {
-    path: '',
-    component: CalculatorComponent
-  },
-  {
-    path: '',
-    component: LoanTablesComponent
-  },
-  {
-    path: 'formCompletion',
-    component: FormComponent
-  },
-  {
     path: 'adminPanel',
     component: AdminPanelComponent
   }
