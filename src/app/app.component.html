@@ -6,8 +6,18 @@
 
 <router-outlet></router-outlet>
 
-<select id="langSelect" #langSelect (change)="translate.use(langSelect.value)">
-  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+<select class="max-w5" id="langSelect" #langSelect (change)="translate.use(langSelect.value)">
+  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang
+    }}
+  </option>
 </select>
 
-
+<footer id="footer">
+  <nav>
+    <ul>
+      <li>Tonigh we're going to drink, do you want to join?</li>
+      <li>No loans, we promise <3</li>
+    </ul>
+  </nav>
+  <p>© Team D 2017. All rights reserved.</p>
+</footer>

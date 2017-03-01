@@ -1,9 +1,9 @@
 <div class="form form-border">
-  <h4>This text should change</h4>
+  <h4>{{'FIRST.TITLE' | translate}}</h4>
 
   <div class="row gutters text-right slider">
     <div class="col col-4">
-      <p>Pageidaujama paskolos suma</p>
+      <p>{{'FIRST.SUM' | translate}}</p>
     </div>
     <div class="col col-6">
       <input value="{{loanSum}}" type='range' min="500" max="58000" step="500" [(ngModel)]="loanSum">
@@ -21,7 +21,7 @@
 
   <div class="row gutters text-right slider">
     <div class="col col-4">
-      <p>Paskolos laikotarpis</p>
+      <p>{{'FIRST.PERIOD' | translate}}</p>
     </div>
     <div class="col col-6">
       <input value="{{loanTime}}" type='range' min="3" max="60" step="1" [(ngModel)]="loanTime">
@@ -29,7 +29,7 @@
     <div class="col col-2">
       <div class="form-item">
         <div class="append">
-          <input value="{{loanTime}}" [(ngModel)]="loanTime" class="mozilla-fix noMonth minimumTime" type="number"><span>Mėn</span>
+          <input value="{{loanTime}}" [(ngModel)]="loanTime" class="mozilla-fix noMonth minimumTime" type="number"><span>{{'FIRST.MĖN' | translate}}</span>
         </div>
       </div>
 
@@ -38,22 +38,22 @@
 
 <div class="row gutters text-right">
   <div class="col col-4">
-    <p>Paskolą imsiu</p>
+    <p>{{'FIRST.FOR' | translate}}</p>
   </div>
   <div class="col col-6">
     <div class="form-item form-checkboxes text-left">
-      <label class="checkbox"><input value="alone" type="radio" name="loan-type" checked> Vienas</label>
-      <label class="checkbox"><input value="spouse" type="radio" name="loan-type"> Su sutuoktiniu (bendraskoliu)</label>
+      <label class="checkbox radio-label"><input value="alone" class="radio-label" type="radio" name="loan-type" checked>{{'FIRST.1' | translate}}</label>
+      <label class="checkbox radio-label"><input value="spouse" type="radio" name="loan-type">{{'FIRST.2' | translate}}</label>
     </div>
   </div>
 </div>
 
 <hr>
-<h4>Informacija apie jūsų pajamas</h4>
+<h4>{{'SECOND.TITLE' | translate}}</h4>
 
 <div class="row gutters text-right slider">
   <div class="col col-4">
-    <p>Jūsų grynosios mėnesio pajamos</p>
+    <p>{{'SECOND.INCOME' | translate}}</p>
   </div>
   <div class="col col-6">
     <input value="{{incomeAmountPerson}}" type='range' min="245" max="10000" [(ngModel)]="incomeAmountPerson">
@@ -62,7 +62,7 @@
     <div class="form-item">
       <div class="append">
         <input value="{{incomeAmountPerson}}" [(ngModel)]="incomeAmountPerson" class="mozilla-fix noMonth minimumPay" type="number">
-        <span>Eur/Mėn</span>
+        <span>{{'SECOND.MĖN' | translate}}</span>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
 
 <div class="extraInfoSpouse row gutters text-right hidden slider">
   <div class="col col-4">
-    <p>Sutuoktinio (bendraskolio) grynosios mėnesio pajamos</p>
+    <p>{{'SECOND.INCOME2' | translate}}</p>
   </div>
   <div class="col col-6">
     <input value="{{incomeAmountSpouse}}" type='range' min="245" max="10000" [(ngModel)]="incomeAmountSpouse">
@@ -79,14 +79,14 @@
     <div class="form-item">
       <div class="append">
         <input value="{{incomeAmountSpouse}}" [(ngModel)]="incomeAmountSpouse" class="mozilla-fix noMonth minimumPay" type="number">
-        <span>Eur/Mėn</span>
+        <span>{{'SECOND.MĖN' | translate}}</span>
       </div>
     </div>
   </div>
 </div>
 
   <div class="form-item">
-    <button onclick="showTables()" class="calculateButton" (click)="calculatePayments()">Skaičiuoti</button>
+    <button onclick="showTables()" class="calculateButton" (click)="calculatePayments()">{{'SECOND.FINISH' | translate}}</button>
   </div>
 
 </div>

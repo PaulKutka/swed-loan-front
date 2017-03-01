@@ -33,6 +33,7 @@ export class CalculatorComponent implements OnInit {
   calculatePayments(): void {
     if(this.loanSum < 500){this.loanSum = 500}
     if(this.loanTime < 3){this.loanTime = 3}
+    if(this.loanTime > 60){this.loanTime = 60}
     this.loanArray = new PaymentsCalculated(this.loanSum, this.loanTime).loanArray;
     this.loanSumOut = this.loanSum;
   }

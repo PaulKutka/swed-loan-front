@@ -1,96 +1,95 @@
 #main {
-    margin: auto;
-    max-width: 1128px;
+  margin: auto;
+  max-width: 1128px;
 }
 
-#page-klub{
+#page-klub {
   font-family: Lato, sans-serif;
 }
 
-.modal-header h3{
-    margin: 0;
-    padding: 0;
+.modal-header h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .form-border {
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    padding: 32px;
-    margin-bottom: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 32px;
+  margin-bottom: 16px;
 }
 
-.text-right{
+.text-right {
   text-align: right;
 }
 
-.text-left{
+.text-left {
   text-align: left;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
 h1.title, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
-.form-completion .row{
+.form-completion .row {
   margin-top: 0;
 }
 
 body::before, #footer::before {
-    content: "";
-    display: block;
-    background: -ms-linear-gradient(left,#f58322 0,#ffcb13 100%);
-    background: linear-gradient(to right,#f58322 0,#ffcb13 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb661d',endColorstr='#f4ba44',GradientType=1);
-    height: 14px;
+  content: "";
+  display: block;
+  background: -ms-linear-gradient(left, #f58322 0, #ffcb13 100%);
+  background: linear-gradient(to right, #f58322 0, #ffcb13 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb661d', endColorstr='#f4ba44', GradientType=1);
+  height: 14px;
 }
 
-.logo{
+.logo {
   height: 70px;
-  border:0;
+  border: 0;
   vertical-align: middle;
 }
 
-.orange{
-  background: #FF8C00;
+.orange {
+  background: #f58322;
 }
 
-.mozilla-fix.hasMonth{
+.mozilla-fix.hasMonth {
   max-width: 6em;
 }
 
-.mozilla-fix.noMonth{
+.mozilla-fix.noMonth {
   max-width: 8em;
 }
 
-.form h4{
+.form h4 {
   margin-bottom: 2em;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.hidden-tables{
+.hidden-tables {
   display: none;
 }
 
 /* HARDCODED AS HELL! LOL*/
-th{
+th {
   text-align: center;
 }
 
-#results td{
-  text-align:center;
+#results td {
+  text-align: center;
   vertical-align: middle;
 }
 
 #results .max-w50 {
   margin: auto;
 }
-
 
 /* Input range styles*/
 input[type="range"] {
@@ -103,29 +102,35 @@ input[type="range"] {
   margin-top: 15px;
   transition: all 0.3s ease;
 }
+
 input[type="range"]:hover {
   background-color: #fffde3;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
-  width: 20px;
-  height: 20px;
-  background-color: #cee2d5;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  top: -9px;
+  background-color: #f58322;
+  background-image: url("https://www.swedbank.lt/css/images/bg.spreadsheets_consumer_slider_handle.png");
   border-radius: 30px;
   box-shadow: 0px 0px 3px #636d6d;
   transition: all 0.5s ease;
 }
+
 input[type="range"]::-webkit-slider-thumb:hover {
-  background-color: #ffba27;
+  background-color: #f5d044;
 }
+
 input[type="range"]::-webkit-slider-thumb:active {
   box-shadow: 0px 0px 1px #d8e6e1;
 }
 
 /* Slider Top Margin*/
-.slider .col.col-4 p{
-  margin: 10px 0 0 0!important;
+.slider .col.col-4 p {
+  margin: 10px 0 0 0 !important;
 }
 
 /*Language Button Stick*/
@@ -134,5 +139,35 @@ input[type="range"]::-webkit-slider-thumb:active {
   left: auto;
   right: 0;
   bottom: 50px;
-  position:fixed;
+  position: fixed;
 }
+
+/*Footer Extra*/
+#footer {
+  display: flex;
+  border-top: 1px solid #eee;
+  margin: 104px 0;
+  padding: 0 28px;
+  padding-top: 24px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#footer nav {
+  order: 2;
+  margin-left: auto;
+}
+
+#footer nav ul {
+  text-align: right;
+}
+
+#footer nav ul li {
+  margin-left: 20px;
+}
+
+#footer nav ul li a {
+  color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+}
+

@@ -1,3 +1,5 @@
+
+
 $('input[name="loan-type"]').on('change', function (event) {
   var radioButton = $(event.currentTarget),
 
@@ -24,32 +26,6 @@ $("body").delegate('.minimumTime', 'focusout', function(){
   }
 });
 
-$("body").delegate('.minimumTime', 'focusout', function(){
-  if($(this).val() > 60){
-    $(this).val('60');
-  }
-});
-
-
 function showTables() {
     $('app-loan-tables').removeClass('hidden-tables');
 }
-  var datajson = {
-    "lt": [ "Vilnius" , "Kaunas"],
-    "ln": ["Wilno","Gzegowc"]
-  };
-
-
-  $("#down").on('change', function () {
-    var locations = datajson[$(this).val()];
-    var locationString = '';
-    $.each(locations, function (i, item) {
-      locationString += '<option value="' + item + '">' + item + '</option>';
-    });
-    $('#down2').html(locationString);
-  });
-
-
-$('.calculateButton').click(function(){
-  $('.app-loan-tables').removeClass('hidden');
-});
