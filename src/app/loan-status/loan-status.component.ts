@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoanStatusService} from "./loan-status.service";
 
 @Component({
@@ -9,13 +9,15 @@ import {LoanStatusService} from "./loan-status.service";
 })
 export class LoanStatusComponent implements OnInit {
 
-  trackingNumber: string;
-  loansStatus: any ;
+  trackingNumber: string = "";
+  loansStatus: any = ' ';
   error: any;
 
-  constructor(private loanStatus: LoanStatusService) { }
+  constructor(private loanStatus: LoanStatusService) {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   searchLoan() {
     this.loanStatus.getLoan(this.trackingNumber)
@@ -27,9 +29,6 @@ export class LoanStatusComponent implements OnInit {
       console.log('error :(((');
     });
   };
-
-
-
 
 
 }
