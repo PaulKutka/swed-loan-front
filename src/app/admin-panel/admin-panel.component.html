@@ -35,7 +35,7 @@
       </td>
 
       <!-- Modal Edition-->
-      <div id="{{list.clientName}}" class="modal-box hide">
+      <div id="{{list.clientName}}" class="modal-box hide"  >
         <div class="modal">
           <span class="close"></span>
           <div class="modal-header">
@@ -117,8 +117,8 @@
             <hr>
 
             <div class="editButtons">
-              <button (click)="changeStatus(status.value, list.loanId)"class="button">Patvirtinti</button>
-              <button class="button outline">Atmesti</button>
+              <button (click)="changeStatus(status.value, list.loanId) " data-action="modal-close" class="button">Patvirtinti</button>
+              <button class="button outline" data-action="modal-close" >Atmesti</button>
             </div>
           </div>
 
