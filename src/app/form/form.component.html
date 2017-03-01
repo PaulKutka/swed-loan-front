@@ -23,7 +23,7 @@
     <div class="col col-2">
       <div class="form-item">
         {{ loanSumOut }}
-        <input type="number" value="{{ loanSumOut }}" min="500" max="58000" step="500" disabled #sum>
+        <input type="number" value="{{ loanSumOut }}" min="500" max="58000" step="500"  disabled #sum>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" id="month" name="month" min="3" max="60" #term>
+        <input type="number" id="month" name="month" min="3" max="60" required #term>
         <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
@@ -56,7 +56,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" id="day" name="day" min="1" max="28" #payDay>
+        <input type="number" id="day" name="day" min="1" max="28" required #payDay>
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number" id="number" name="number" maxlength="8" #documentNumber>
+        <input type="number" id="number" name="number" maxlength="8" required #documentNumber>
       </div>
     </div>
   </div>
@@ -153,9 +153,8 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select id="down" #country>
-          <option value="lt">{{'FORM.COUNTRY1' | translate}}</option>
-          <option value="ln">{{'FORM.COUNTRY2' | translate}}</option>
+        <select [ngModelOptions]="{standalone:true}" [(ngModel)]="selectedCountry.id" (change)="onSelect($event.target.value)" #country>
+          <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
         </select>
       </div>
     </div>
@@ -170,13 +169,13 @@
     </div>
     <div class="col col-4">
       <div class="form-item ">
-        <select id="down2" #city>
-          <option value="vilnius">Vilnius</option>
-          <option value="kaunas">Kaunas</option>
-        </select>
+          <select required #city>
+            <option *ngIf='selectedCountry.id == 0' value="0">--Select--</option>
+            <option *ngFor="let state of states " value= {{state.id}}>{{state.name}}</option>
+          </select>
+        </div>
       </div>
     </div>
-  </div>
 
   <!-- Adresas-->
   <div class="row gutters">
@@ -187,7 +186,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="address" value="" id="address" #address>
+        <input type="text" name="address" value="" id="address" required #address>
       </div>
     </div>
   </div>
@@ -200,7 +199,7 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="number" ng-maxlength="12" ng-minlength="8" name="phone" value="" id="phone" #phoneNumber>
+      <input type="number" ng-maxlength="12" ng-minlength="8" name="phone" value="" required id="phone" #phoneNumber>
     </div>
   </div>
 
@@ -214,7 +213,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="email" id="email" name="email" value="" #email>
+        <input type="email" id="email" name="email" value="" #email required>
       </div>
     </div>
   </div>
@@ -228,7 +227,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="245" step="5" name="salary" id="salary" value="" #income>
+        <input type="number" min="245" step="5" name="salary" id="salary" required value="" #income>
       </div>
     </div>
   </div>
@@ -271,3 +270,4 @@
     </div>
   </div>
 </div>
+
