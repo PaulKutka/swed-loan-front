@@ -1,11 +1,13 @@
-// $(document).ready(function(){
 
+function radioButtonHide(){
   $('input[name="loan-type"]').on('change', function (event) {
     var radioButton = $(event.currentTarget),
 
       hasSpouse = radioButton.val() === 'spouse' && radioButton.prop('checked');
     $('.extraInfoSpouse').toggleClass('hidden', !hasSpouse);
   }).change();
+
+}
 
 // pakeisiu
   $("body").delegate('.requiredLoan', 'focusout', function(){
@@ -40,6 +42,4 @@
   $('.calculateButton').click(function(){
     $('.app-loan-tables').removeClass('hidden');
   });
-// });
-//
 
