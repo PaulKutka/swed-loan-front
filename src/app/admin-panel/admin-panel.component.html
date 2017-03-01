@@ -14,25 +14,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>500</td>
-      <td>Kazys</td>
-      <td>
-          <select class="max-w50">
-            <option value="confirm">Patvirtintas</option>
-            <option value="waiting">Laukiamas patvirtinimo</option>
-            <option value="declined">Nepatvirtintas</option>
-          </select>
-      </td>
-      <td>2016-09-07</td>
-    </tr>
 
     <tr *ngFor="let list of adminPanels">
       <td>{{list.loanAmount}}</td>
       <td>{{list.clientName}}</td>
       <td>{{list.status}}</td>
       <td>{{list.loanTerm}}</td>
-      <td><button data-component="modal" data-target="#my-modal">Redaguoti</button></td>
+      <td>
+        <button data-component="modal" data-target="#my-modal">Redaguoti</button>
+      </td>
     </tr>
 
 
@@ -45,75 +35,86 @@
 <div id="my-modal" class="modal-box hide">
   <div class="modal">
     <span class="close"></span>
-    <div class="modal-header">Redagavimas</div>
+    <div class="modal-header">
+      <h3>Redagavimas</h3>
+    </div>
     <div class="modal-body">
 
-      <!-- Vardas -->
-      <div class="row gutters">
-        <div class="col col-6">Vardas</div>
-        <div class="col col-6">...</div>
+      <!--&lt;!&ndash; Vardas &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Vardas</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Pavarde&ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Pavarde</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+
+      <!--&lt;!&ndash; Asmens dokumento tipas&ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Asmens dokumento tipas</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Dokumento numeris&ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Dokumento numeris</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Salis &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Šalis</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Miestas &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Miestas</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Adresas &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Adresas</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Telefono numeris &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Telefono numeris</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Pastas &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Elektroninis paštas</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Mėnesinis atlyginimas atskaičius mokesčius &ndash;&gt;-->
+      <!--<div class="row gutters">-->
+        <!--<div class="col col-6">Mėnesinis atlyginimas atskaičius mokesčius</div>-->
+        <!--<div class="col col-6">...</div>-->
+      <!--</div>-->
+
+      <h4>Statusas</h4>
+      <select class="max-w50">
+        <option value="confirm">Patvirtintas</option>
+        <option value="waiting">Laukiamas patvirtinimo</option>
+        <option value="declined">Nepatvirtintas</option>
+      </select>
+
+      <br>
+
+      <div class="editButtons">
+        <button class="button">Patvirtinti</button>
+        <button class="button outline">Atmesti</button>
       </div>
-
-      <!-- Pavarde-->
-      <div class="row gutters">
-        <div class="col col-6">Pavarde</div>
-        <div class="col col-6">...</div>
-      </div>
-
-
-    <!-- Asmens dokumento tipas-->
-    <div class="row gutters">
-      <div class="col col-6">Asmens dokumento tipas</div>
-      <div class="col col-6">...</div>
     </div>
 
-    <!-- Dokumento numeris-->
-    <div class="row gutters">
-      <div class="col col-6">Dokumento numeris</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <!-- Salis -->
-    <div class="row gutters">
-      <div class="col col-6">Šalis</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <!-- Miestas -->
-    <div class="row gutters">
-      <div class="col col-6">Miestas</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <!-- Adresas -->
-    <div class="row gutters">
-      <div class="col col-6">Adresas</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <!-- Telefono numeris -->
-    <div class="row gutters">
-      <div class="col col-6">Telefono numeris</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <!-- Pastas -->
-    <div class="row gutters">
-      <div class="col col-6">Elektroninis paštas</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <!-- Mėnesinis atlyginimas atskaičius mokesčius -->
-    <div class="row gutters">
-      <div class="col col-6">Mėnesinis atlyginimas atskaičius mokesčius</div>
-      <div class="col col-6">...</div>
-    </div>
-
-    <div class="editButtons">
-      <button class="button outline">Patvirtinti</button>
-      <button class="button outline">Atmesti</button>
-    </div>
   </div>
-
-</div>
 </div>
