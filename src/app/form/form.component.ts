@@ -9,12 +9,17 @@ import {FormService} from "./form.service";
 })
 export class FormComponent implements OnInit {
 
-
-  constructor(private service : FormService) {}
-
-  ngOnInit() {
+  constructor(private service : FormService) {
+    this.reloadPage();
   }
 
+  ngOnInit() {
+
+  }
+
+  reloadPage() {
+    window.location.reload();
+  }
 
   onSubmit(sum:number,
            term:number,
