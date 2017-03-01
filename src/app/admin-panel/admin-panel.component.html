@@ -21,11 +21,13 @@
       <td>{{list.status}}</td>
       <td>{{list.loanTerm}}</td>
       <td>
-        <button data-component="modal" data-target="#my-modal">Redaguoti</button>
+        <button data-component="modal"
+                [attr.data-target]="'#' + list.clientName">Redaguoti
+        </button>
       </td>
 
       <!-- Modal Edition-->
-      <div id="my-modal" class="modal-box hide">
+      <div id="{{list.clientName}}" class="modal-box hide">
         <div class="modal">
           <span class="close"></span>
           <div class="modal-header">
@@ -35,66 +37,68 @@
 
             <!-- Vardas -->
             <div class="row gutters">
-            <div class="col col-6">Vardas</div>
-            <div class="col col-6">{{list.clientName}}</div>
+              <div class="col col-6"><h6>Vardas</h6></div>
+              <div class="col col-6">{{list.clientName}}</div>
             </div>
 
             <!-- Pavarde-->
             <div class="row gutters">
-            <div class="col col-6">Pavarde</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Pavarde</h6></div>
+              <div class="col col-6">{{list.clientSurname}}</div>
             </div>
-
 
             <!-- Asmens dokumento tipas-->
             <div class="row gutters">
-            <div class="col col-6">Asmens dokumento tipas</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Asmens dokumento tipas</h6></div>
+              <div class="col col-6">{{list.clientPersonalDocumentType}}</div>
             </div>
 
             <!-- Dokumento numeris-->
             <div class="row gutters">
-            <div class="col col-6">Dokumento numeris</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Dokumento numeris</h6></div>
+              <div class="col col-6">{{list.clientPersonalDocumentNumber}}</div>
             </div>
 
             <!-- Salis -->
             <div class="row gutters">
-            <div class="col col-6">Šalis</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Šalis</h6></div>
+              <div class="col col-6">{{list.country}}</div>
             </div>
 
             <!-- Miestas -->
             <div class="row gutters">
-            <div class="col col-6">Miestas</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Miestas</h6></div>
+              <div class="col col-6">{{list.city}}</div>
             </div>
 
             <!-- Adresas -->
             <div class="row gutters">
-            <div class="col col-6">Adresas</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Adresas</h6></div>
+              <div class="col col-6">{{list.address}}</div>
             </div>
 
             <!-- Telefono numeris -->
             <div class="row gutters">
-            <div class="col col-6">Telefono numeris</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Telefono numeris</h6></div>
+              <div class="col col-6">{{list.phoneNumber}}</div>
             </div>
 
             <!-- Pastas -->
             <div class="row gutters">
-            <div class="col col-6">Elektroninis paštas</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Elektroninis paštas</h6></div>
+              <div class="col col-6">{{list.email}}</div>
             </div>
 
             <!-- Mėnesinis atlyginimas atskaičius mokesčius -->
             <div class="row gutters">
-            <div class="col col-6">Mėnesinis atlyginimas atskaičius mokesčius</div>
-            <div class="col col-6">...</div>
+              <div class="col col-6"><h6>Mėnesinis atlyginimas atskaičius mokesčius</h6></div>
+              <div class="col col-6">{{list.income}}</div>
             </div>
 
-            <h4>Statusas</h4>
+            <br>
+            <hr>
+
+            <h5>Statusas</h5>
             <select class="max-w50">
               <option value="confirm">Patvirtintas</option>
               <option value="waiting">Laukiamas patvirtinimo</option>
@@ -102,6 +106,7 @@
             </select>
 
             <br>
+            <hr>
 
             <div class="editButtons">
               <button class="button">Patvirtinti</button>
