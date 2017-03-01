@@ -21,7 +21,8 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" step="500" #sum>
+        <input type="number" min="500" max="58000" step="500" class="error" #sum>
+
       </div>
     </div>
   </div>
@@ -33,9 +34,6 @@
         <label>{{'FORM.TERM' | translate}} <span class="req">*</span></label>
       </div>
     </div>
-
-
-
 
     <div class="col col-2">
       <div class="form-item">
@@ -195,9 +193,7 @@
         <label>{{'FORM.TEL' | translate}}  <span class="req">*</span></label>
       </div>
     </div>
-    <div class="col col-1">
-    </div>
-    <div class="col col-2">
+    <div class="col col-4">
       <input type="text" max="9" name="" value="" #phoneNumber>
     </div>
   </div>
@@ -212,11 +208,10 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="email" name="" value="" #email>
+        <input type="email" name="" value=""   #email>
+        </div>
       </div>
     </div>
-  </div>
-
   <!-- Mėnesinis atlyginimas atskaičius mokesčius -->
   <div class="row gutters">
     <div class="col col-4 text-right">
@@ -234,7 +229,7 @@
   <div class="form-item">
     <label><br></label>
     <button data-component="modal" data-target="#confirmation-modal">{{'FORM.FINISH1' | translate}}</button>
-    <button data-component="modal" data-target="#confirmation-modal"
+    <button type="submit" data-component="modal" data-target="#confirmation-modal"
             (click)="onSubmit(
             sum.value,
             term.value,
@@ -254,7 +249,6 @@
 </form>
 
 
-<!-- Confirmation modal-->
 <div id="confirmation-modal" class="modal-box hide">
   <div class="modal">
     <span class="close"></span>
