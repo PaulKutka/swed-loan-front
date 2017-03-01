@@ -1,6 +1,4 @@
-
-
-  $('input[name="loan-type"]').on('change', function (event) {
+$('input[name="loan-type"]').on('change', function (event) {
   var radioButton = $(event.currentTarget),
 
     hasSpouse = radioButton.val() === 'spouse' && radioButton.prop('checked');
@@ -26,6 +24,13 @@ $("body").delegate('.minimumTime', 'focusout', function(){
   }
 });
 
+$("body").delegate('.minimumTime', 'focusout', function(){
+  if($(this).val() > 60){
+    $(this).val('60');
+  }
+});
+
+
 function showTables() {
     $('app-loan-tables').removeClass('hidden-tables');
 }
@@ -43,3 +48,8 @@ function showTables() {
     });
     $('#down2').html(locationString);
   });
+
+
+$('.calculateButton').click(function(){
+  $('.app-loan-tables').removeClass('hidden');
+});
