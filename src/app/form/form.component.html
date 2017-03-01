@@ -23,6 +23,7 @@
     <div class="col col-2">
       <div class="form-item">
         <input type="number" min="500" max="58000" name="sum" id="sum" #sum>
+        {{sum.value}}
       </div>
     </div>
   </div>
@@ -247,7 +248,8 @@
             address.value,
             phoneNumber.value,
             email.value,
-            income.value)">{{'FORM.FINISH2' | translate}}</button>
+            income.value)">
+      {{'FORM.FINISH2' | translate}}</button>
   </div>
 
 </form>
