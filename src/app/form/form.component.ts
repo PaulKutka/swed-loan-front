@@ -9,10 +9,12 @@ import {FormService} from "./form.service";
 })
 export class FormComponent implements OnInit {
 
-  constructor(private service : FormService) { }
+
+  constructor(private service : FormService) {}
 
   ngOnInit() {
   }
+
 
   onSubmit(sum:number,
            term:number,

@@ -49,7 +49,7 @@ $(document).ready(function () {
         required: "Please, enter an valid code"
       },
       "month": {
-        required: "Please, enter a valid month",
+        required: "Please, enter a valid month"
       }
     },
 

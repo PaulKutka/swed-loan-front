@@ -22,10 +22,13 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" step="500" disabled #sum>
+        {{ loanSumOut }}
+        <input type="number" value="{{ loanSumOut }}" min="500" max="58000" step="500" disabled #sum>
       </div>
     </div>
   </div>
+
+  <!--[value]="myCount"-->
 
   <!-- Paskolos terminas -->
   <div class="row gutters">
@@ -195,7 +198,7 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" value="" id="phone" #phoneNumber>
+      <input type="number" ng-maxlength="12" ng-minlength="8" name="phone" value="" id="phone" #phoneNumber>
     </div>
   </div>
 
