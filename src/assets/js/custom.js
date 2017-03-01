@@ -34,7 +34,6 @@ function showTables() {
     "ln": ["Wilno","Gzegowc"]
   };
 
-
   $("#down").on('change', function () {
     var locations = datajson[$(this).val()];
     var locationString = '';
