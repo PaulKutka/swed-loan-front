@@ -5,8 +5,8 @@
         <h3>Patikrinti paskolos statusą</h3>
         <hr>
         <div class="append w75">
-          <input type="text" name="search" placeholder="Įveskite turimą paskolos kodą..">
-          <button class="button outline" data-component="modal" data-target="#status-modal">Ieškoti</button>
+          <input value="{{trackingNumber}}" type="text" name="search" placeholder="Įveskite turimą paskolos kodą..">
+          <button (click)="searchLoan()" class="button outline" data-component="modal" data-target="#status-modal">Ieškoti</button>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <h3>Statusas</h3>
     </div>
     <div class="modal-body text-center">
-      <h3>Nepatikrinta
+      <h3>status
       </h3>
     </div>
   </div>
