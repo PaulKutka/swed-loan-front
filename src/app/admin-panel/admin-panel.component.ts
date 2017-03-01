@@ -35,4 +35,10 @@ export class AdminPanelComponent implements OnInit {
   };
 
 
+  changeStatus(status, id) {
+ this.adminPanel.changeStatus(status, id);
+  };
+
+
+
 }
