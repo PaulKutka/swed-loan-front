@@ -1301,14 +1301,14 @@ button:hover,
 .button.outline {
   background: none;
   border-width: 2px;
-  border-color: #1c86f2;
-  color: #1c86f2;
+  border-color: #fec202;
+  color: #fec202;
 }
 
 .button.outline:hover {
   background: none;
-  color: rgba(28, 134, 242, 0.6);
-  border-color: rgba(28, 134, 242, 0.5);
+  color: rgba(255, 186, 39, 0.6);
+  border-color: rgba(255, 186, 39, 0.5);
 }
 
 .button.outline:disabled, .button.outline.disabled {
