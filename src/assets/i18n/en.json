@@ -55,9 +55,14 @@
     "SURN": "Last name",
     "CODE": "Personal code",
     "TYPE": "Type of personal document",
+    "PASSPORT": "Passport",
+    "CARD": "Identity Card",
+    "PERM": "Permission to live in Lithuania",
     "NR": "Number of document",
     "CONTACT": "Contacts",
     "COUNTRY": "Country",
+    "COUNTRY1": "Lithuania",
+    "COUNTRY2": "Poland",
     "CITY": "City",
     "ADDRESS": "Address",
     "TEL": "Telefone number",
@@ -67,4 +72,18 @@
     "FINISH2": "Submit",
     "FINISH3": "Confirmation",
     "CODE": "Code"
-  }}
+  },
+
+  "ADMIN":{
+    "HOME": "Consumer Loans Calculator",
+    "TITLE": "Consumer Loans",
+    "COL1": "Amount",
+    "COL2": "Consumer",
+    "COL3": "Status",
+    "COL4": "Term",
+    "FINISH1": "Approved",
+    "FINISH2": "Waiting for approval",
+    "FINISH3": "Disapproved"
+
+  }
+}

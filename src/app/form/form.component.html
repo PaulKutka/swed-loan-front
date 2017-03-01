@@ -1,4 +1,5 @@
-<form class="form form-border">
+<form class="form form-border" data-toggle="validator" role="form"
+      id="form" method="post" action="#">
 
 
   <nav class="breadcrumbs">
@@ -21,7 +22,8 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" step="500" #sum>
+        {{ loanSumOut }}
+        <input type="number" value="{{ loanSumOut }}" min="500" max="58000" step="500" disabled #sum>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.TERM' | translate}} <span class="req">*</span></label>
+        <label for="month">{{'FORM.TERM' | translate}} <span class="req">*</span></label>
       </div>
     </div>
 
@@ -39,7 +41,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="3" max="60" #term>
+        <input type="number" id="month" name="month" min="3" max="60" #term>
         <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
@@ -49,12 +51,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.DAY' | translate}}<span class="req">*</span></label>
+        <label for="day">{{'FORM.DAY' | translate}}<span class="req">*</span></label>
       </div>
     </div>
-    <div class="col col-1">
+    <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="1" max="28" #payDay>
+        <input type="number" id="day" name="day" min="1" max="28" #payDay>
       </div>
     </div>
   </div>
@@ -65,12 +67,14 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.NAME' | translate}} <span class="req">*</span></label>
+        <label for="name">{{'FORM.NAME' | translate}}
+          <span class="req">*</span>
+        </label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" #name>
+        <input type="text" name="name" id="name" required #name>
       </div>
     </div>
   </div>
@@ -79,12 +83,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.SURN' | translate}} <span class="req">*</span></label>
+        <label for="surname">{{'FORM.SURN' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" #surName>
+        <input type="text" name="surname" id="surname" required #surName>
       </div>
     </div>
   </div>
@@ -93,12 +97,12 @@
   <div class="row gutters ">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.CODE' | translate}} <span class="req">*</span></label>
+        <label for="code">{{'FORM.CODE' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" maxlength="11" #personalCode>
+        <input type="text" name="code" id="code" maxlength="11" required #personalCode>
       </div>
     </div>
   </div>
@@ -112,10 +116,10 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select #documentType>
-          <option>Pasas</option>
-          <option>Tapatybės kortelė</option><
-          <option>Leidimas gyventi Lietuvoje</option><
+        <select name="type" id="type" required #documentType>
+          <option>{{'FORM.PASSPORT' | translate}}</option>
+          <option>{{'FORM.CARD' | translate}}</option>
+          <option>{{'FORM.PERM' | translate}}</option>
         </select>
 
       </div>
@@ -126,12 +130,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.NR' | translate}} <span class="req">*</span></label>
+        <label for="number">{{'FORM.NR' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" maxlength="8" #documentNumber>
+        <input type="number" id="number" name="number" maxlength="8" #documentNumber>
       </div>
     </div>
   </div>
@@ -150,8 +154,8 @@
     <div class="col col-4">
       <div class="form-item">
         <select id="down" #country>
-          <option value="lt">Lietuva</option>
-          <option value="ln">Lenkija</option>
+          <option value="lt">{{'FORM.COUNTRY1' | translate}}</option>
+          <option value="ln">{{'FORM.COUNTRY2' | translate}}</option>
         </select>
       </div>
     </div>
@@ -165,25 +169,25 @@
       </div>
     </div>
     <div class="col col-4">
-      <div class="form-item " >
+      <div class="form-item ">
         <select id="down2" #city>
           <option value="vilnius">Vilnius</option>
           <option value="kaunas">Kaunas</option>
         </select>
+      </div>
     </div>
-  </div>
   </div>
 
   <!-- Adresas-->
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.ADDRESS' | translate}}<span class="req">*</span></label>
+        <label for="address">{{'FORM.ADDRESS' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="" value="" #address>
+        <input type="text" name="address" value="" id="address" #address>
       </div>
     </div>
   </div>
@@ -192,13 +196,11 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.TEL' | translate}}  <span class="req">*</span></label>
+        <label for="phone">{{'FORM.TEL' | translate}} <span class="req">*</span></label>
       </div>
     </div>
-    <div class="col col-1">
-    </div>
-    <div class="col col-2">
-      <input type="text" max="9" name="" value="" #phoneNumber>
+    <div class="col col-4">
+      <input type="number" ng-maxlength="12" ng-minlength="8" name="phone" value="" id="phone" #phoneNumber>
     </div>
   </div>
 
@@ -207,12 +209,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.EMAIL' | translate}} <span class="req">*</span></label>
+        <label for="email">{{'FORM.EMAIL' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="email" name="" value="" #email>
+        <input type="email" id="email" name="email" value="" #email>
       </div>
     </div>
   </div>
@@ -221,12 +223,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>{{'FORM.SALARY' | translate}}<span class="req">*</span></label>
+        <label for="salary">{{'FORM.SALARY' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="245" step="5" name="" value="" #income>
+        <input type="number" min="245" step="5" name="salary" id="salary" value="" #income>
       </div>
     </div>
   </div>
@@ -234,7 +236,7 @@
   <div class="form-item">
     <label><br></label>
     <button data-component="modal" data-target="#confirmation-modal">{{'FORM.FINISH1' | translate}}</button>
-    <button data-component="modal" data-target="#confirmation-modal"
+    <button type="submit" data-component="modal" data-target="#confirmation-modal"
             (click)="onSubmit(
             sum.value,
             term.value,

@@ -53,9 +53,14 @@
     "SURN": "Pavardė",
     "CODE": "Asmens kodas",
     "TYPE": "Asmens dokumento tipas",
+    "PASSPORT": "Pasas",
+    "CARD": "Asmens tapatybės kortelė",
+    "PERM": "Leidimas gyventi Lietuvoje",
     "NR": "Dokumento numeris",
     "CONTACT": "Kontaktiniai duomenys",
     "COUNTRY": "Šalis",
+    "COUNTRY1": "Lietuva",
+    "COUNTRY2": "Lenkija",
     "CITY": "Miestas",
     "ADDRESS": "Adresas",
     "TEL": "Telefonas",
@@ -65,5 +70,18 @@
     "FINISH2": "Pateikti",
     "FINISH3": "Patvirtinimas",
     "CODE": "Kodas"
+  },
+
+  "ADMIN":{
+    "HOME": "Vartojimo paskolos skačiuoklė",
+    "TITLE": "Vartotimo paskolos",
+    "COL1": "Suma",
+    "COL2": "Vartotojas",
+    "COL3": "Statusas",
+    "COL4": "Terminas",
+    "FINISH1": "Patvirtintas",
+    "FINISH2": "Laukiamas patvirtinimo",
+    "FINISH3": "Nepatvirtintas"
+
   }
 }

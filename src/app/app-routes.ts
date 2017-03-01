@@ -4,6 +4,8 @@ import {CalculatorComponent} from "./calculator/calculator.component";
 import {LoanTablesComponent} from "./loan-tables/loan-tables.component";
 import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
 
+
+
 const APP_ROUTES: Routes = [
   {
     path: '',

@@ -12,6 +12,8 @@ import {FormService} from "../form/form.service";
 
 export class AdminPanelComponent implements OnInit {
 
+  number: number = 0;
+
   adminPanels: any;
   error: any;
 
