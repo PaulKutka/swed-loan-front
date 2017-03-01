@@ -36,20 +36,6 @@
   function showTables() {
     $('app-loan-tables').removeClass('hidden-tables');
   }
-  var datajson = {
-    "lt": [ "Vilnius" , "Kaunas"],
-    "ln": ["Wilno","Gzegowc"]
-  };
-
-  $("#down").on('change', function () {
-    var locations = datajson[$(this).val()];
-    var locationString = '';
-    $.each(locations, function (i, item) {
-      locationString += '<option value="' + item + '">' + item + '</option>';
-    });
-    $('#down2').html(locationString);
-  });
-
 
   $('.calculateButton').click(function(){
     $('.app-loan-tables').removeClass('hidden');

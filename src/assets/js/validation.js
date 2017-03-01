@@ -5,6 +5,10 @@ $(document).ready(function () {
         required: true,
         minlength: 3
       },
+      "sum" : {
+        required:true,
+        min: 250
+      },
       "email": {
         required: true,
         email: true
@@ -39,7 +43,7 @@ $(document).ready(function () {
     },
     messages: {
       "name": {
-        required: "Please, enter a name",
+        required: "Please, enter a name"
       },
       "email": {
         required: "Please, enter an email",
