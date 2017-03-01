@@ -27,6 +27,7 @@ export class FormComponent implements OnInit {
             address:string,
             phone:number,
             email:string,
+           income:number,
   ){
 
 
@@ -39,8 +40,14 @@ this.service.create(sum,
   name,
   lastName,
   personalCode,
-  personalDocumentType, documentNumber,
- country, city, address, phone, email);
+  personalDocumentType,
+  documentNumber,
+ country,
+  city,
+  address,
+  phone,
+  email,
+income);
   }
 
 }
