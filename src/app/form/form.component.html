@@ -22,7 +22,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" step="500" id="sum" #sum>
+        <input type="number" min="500" max="58000" name="sum" id="sum" #sum>
       </div>
     </div>
   </div>
@@ -150,7 +150,8 @@
     <div class="col col-4">
       <div class="form-item">
         <select [ngModelOptions]="{standalone:true}" [(ngModel)]="selectedCountry.id" (change)="onSelect($event.target.value)" #country>
-          <option *ngFor="let country of countries" value= {{country.name}}>{{country.name}}</option>
+          <option value="0">--Select--</option>
+          <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
         </select>
       </div>
     </div>
@@ -167,7 +168,7 @@
       <div class="form-item ">
           <select required #city>
             <option *ngIf='selectedCountry.id == 0' value="0">--Select--</option>
-            <option *ngFor="let state of states " value= {{state.name}}>{{state.name}}</option>
+            <option *ngFor="let state of states " value= {{state.id}}>{{state.name}}</option>
           </select>
         </div>
       </div>

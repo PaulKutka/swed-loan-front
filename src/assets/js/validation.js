@@ -7,7 +7,7 @@ $(document).ready(function () {
       },
       "sum" : {
         required:true,
-        min: 250
+        min: 500
       },
       "email": {
         required: true,
@@ -57,10 +57,6 @@ $(document).ready(function () {
       }
     },
 
-    submitHandler: function (form) { // for demo
-      alert('valid form submitted'); // for demo
-      return false; // for demo
-    }
   });
 
 });
