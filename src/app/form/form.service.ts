@@ -24,6 +24,7 @@ export class FormService {
     phone:number,
     email:string,
     income: number,
+    trackingNumber: string,
     ) {
     return this.http
       .post("https://api-swed-loan.herokuapp.com/loans/add", ({
@@ -41,6 +42,21 @@ export class FormService {
         "phoneNumber": phone,
         "email": email,
         "income": income,
+        "trackingNumber": trackingNumber,
+        // "loanAmount": 500,
+        // "loanTerm": 25,
+        // "loanPayday": 25,
+        // "clientName": "Vardenis",
+        // "clientSurname": "Pavardenis",
+        // "clientPersonalCode": 39008189963,
+        // "clientPersonalDocumentNumber": 12345678,
+        // "clientPersonalDocumentType": "Pasas",
+        // "country": "Lithuania",
+        // "city": "Vilnius",
+        // "address": "Perkūnkiemio g. 5",
+        // "phoneNumber": "864445696",
+        // "email": "potato@gmail.com",
+        // "income": 245,
       }), {headers: this.headers})
       .toPromise()
       // .then(res => res.json().data)

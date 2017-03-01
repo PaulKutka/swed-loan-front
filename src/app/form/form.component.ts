@@ -12,6 +12,8 @@ import {Country} from "./country";
 })
 export class FormComponent implements OnInit {
 
+  trackingNumber : any;
+
   selectedCountry:Country = new Country(0, 'Lietuva');
   countries: Country[];
   states: State[];
@@ -24,8 +26,11 @@ export class FormComponent implements OnInit {
     this.states = this._dataService.getStates().filter((item)=> item.countryid == countryid);
   }
   ngOnInit() {
-
   }
+
+  getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
   onSubmit(sum:number,
            term:number,
@@ -44,6 +49,8 @@ export class FormComponent implements OnInit {
   ){
 
 
+
+    this.trackingNumber = this.getRandomInt(100, 999).toString()+''+this.getRandomInt(100, 999).toString()+''+this.getRandomInt(100, 999).toString();
     // console.log(country, term, day, name, lastName, personalCode, personalDocumentType, documentNumber, country, city, address,
     // phone, email);
 
@@ -60,7 +67,8 @@ this.service.create(sum,
   address,
   phone,
   email,
-income);
+income,
+this.trackingNumber);
   }
 
 }
