@@ -113,9 +113,9 @@
     <div class="col col-4">
       <div class="form-item">
         <select #documentType>
-          <option>Pasas</option>
-          <option>Tapatybės kortelė</option><
-          <option>Leidimas gyventi Lietuvoje</option><
+          <option>{{'FORM.PASSPORT' | translate}}</option>
+          <option>{{'FORM.CARD' | translate}}</option><
+          <option>{{'FORM.PERM' | translate}}</option><
         </select>
 
       </div>
@@ -150,8 +150,8 @@
     <div class="col col-4">
       <div class="form-item">
         <select id="down" #country>
-          <option value="lt">Lietuva</option>
-          <option value="ln">Lenkija</option>
+          <option value="lt">{{'FORM.COUNTRY1' | translate}}</option>
+          <option value="ln">{{'FORM.COUNTRY2' | translate}}</option>
         </select>
       </div>
     </div>

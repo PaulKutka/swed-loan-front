@@ -1,15 +1,15 @@
 <div class="form form-border">
-  <h3>Vartojimo paskolos</h3>
+  <h3>{{'ADMIN.TITLE' | translate}}</h3>
   <hr>
   <br>
 
   <table id="results" class="sortable">
     <thead>
     <tr>
-      <th>Suma</th>
-      <th>Vartotojas</th>
-      <th>Statusas</th>
-      <th>Data</th>
+      <th>{{'ADMIN.COL1' | translate}}</th>
+      <th>{{'ADMIN.COL2' | translate}}</th>
+      <th>{{'ADMIN.COL3' | translate}}</th>
+      <th>{{'ADMIN.COL4' | translate}}</th>
     </tr>
     </thead>
     <tbody>
@@ -18,37 +18,45 @@
       <td>Kazys</td>
       <td>
           <select class="max-w50">
-            <option value="confirm">Patvirtintas</option>
-            <option value="waiting">Laukiamas patvirtinimo</option>
-            <option value="declined">Nepatvirtintas</option>
+            <option value="confirm">{{'ADMIN.FINISH1' | translate}}</option>
+            <option value="waiting">{{'ADMIN.FINISH2' | translate}}</option>
+            <option value="declined">{{'ADMIN.FINISH3' | translate}}</option>
           </select>
       </td>
-      <td>2016-09-07</td>
+      <td>60</td>
     </tr>
     <tr>
       <td>9500</td>
       <td>Petras</td>
       <td>
         <select class="max-w50">
-          <option value="confirm">Patvirtintas</option>
-          <option value="waiting">Laukiamas patvirtinimo</option>
-          <option value="declined">Nepatvirtintas</option>
+          <option value="confirm">{{'ADMIN.FINISH1' | translate}}</option>
+          <option value="waiting">{{'ADMIN.FINISH2' | translate}}</option>
+          <option value="declined">{{'ADMIN.FINISH3' | translate}}</option>
         </select>
       </td>
-      <td>2015-05-01</td>
+      <td>20</td>
     </tr>
     <tr>
       <td>25500</td>
       <td>Stasys</td>
       <td>
         <select class="max-w50">
-          <option value="confirm">Patvirtintas</option>
-          <option value="waiting">Laukiamas patvirtinimo</option>
-          <option value="declined">Nepatvirtintas</option>
+          <option value="confirm">{{'ADMIN.FINISH1' | translate}}</option>
+          <option value="waiting">{{'ADMIN.FINISH2' | translate}}</option>
+          <option value="declined">{{'ADMIN.FINISH3' | translate}}</option>
         </select>
       </td>
-      <td>2017-05-01</td>
+      <td>5</td>
     </tr>
+
+    <tr *ngFor="let list of adminPanels">
+      <td>{{list.loanAmount}}</td>
+      <td>{{list.clientName}}</td>
+      <td>{{list.status}}</td>
+      <td>{{list.loanTerm}}</td>
+    </tr>
+
 
     </tbody>
   </table>
