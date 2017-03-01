@@ -1,15 +1,15 @@
-import { Injectable, Component } from '@angular/core';
+import {Injectable, Component} from '@angular/core';
 import {Http} from "@angular/http";
 
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class LoanStatusService {
+export class AdminsPanelService {
 
   constructor(private http: Http) { }
 
-  getLoan(trackingNumber: string): Promise<any>{
-    return this.http.get("https://api-swed-loan.herokuapp.com/view/" + trackingNumber.toString())
+  getLoansList(): Promise<any>{
+    return this.http.get("https://api-swed-loan.herokuapp.com/loans")
       .toPromise()
       .then(response => response.json())
       .catch(this.handleError);
