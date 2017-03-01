@@ -9,7 +9,7 @@
       <th>Suma</th>
       <th>Vartotojas</th>
       <th>Statusas</th>
-      <th>Data</th>
+      <th>Terminas</th>
     </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
             <option value="declined">Nepatvirtintas</option>
           </select>
       </td>
-      <td>2016-09-07</td>
+      <td>60</td>
     </tr>
     <tr>
       <td>9500</td>
@@ -35,7 +35,7 @@
           <option value="declined">Nepatvirtintas</option>
         </select>
       </td>
-      <td>2015-05-01</td>
+      <td>20</td>
     </tr>
     <tr>
       <td>25500</td>
@@ -47,14 +47,14 @@
           <option value="declined">Nepatvirtintas</option>
         </select>
       </td>
-      <td>2017-05-01</td>
+      <td>5</td>
     </tr>
 
     <tr *ngFor="let list of adminPanels">
-      <td>{{list.loan_amount}}</td>
-      <td>{{list.client_name}}</td>
+      <td>{{list.loanAmount}}</td>
+      <td>{{list.clientName}}</td>
       <td>{{list.status}}</td>
-      <td>{{list.loan_term}}</td>
+      <td>{{list.loanTerm}}</td>
     </tr>
 
 

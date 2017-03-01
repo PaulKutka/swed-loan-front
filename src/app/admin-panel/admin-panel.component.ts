@@ -1,6 +1,5 @@
 
 import {Component, OnInit} from "@angular/core";
-import {AdminsPanelService} from "./admins-panel.service";
 import {FormService} from "../form/form.service";
 
 @Component({
