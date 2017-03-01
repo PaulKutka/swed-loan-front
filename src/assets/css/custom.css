@@ -68,11 +68,6 @@ body::before, #footer::before {
 .form h4 {
   margin-bottom: 2em;
 }
-
-.hidden {
-  display: none;
-}
-
 .hidden-tables {
   display: none;
 }

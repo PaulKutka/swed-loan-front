@@ -1,5 +1,5 @@
-<form class="formMain form-border" data-toggle="validator" role="form"
-      id="form" method="post" action="#">
+<form class="form-border" data-toggle="validator" role="form"
+      method="post" action="#">
 
 
   <nav class="breadcrumbs">
@@ -17,13 +17,13 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
+
         <label for="sum">{{'FORM.SUM' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" name="sum" id="sum" #sum>
-        {{sum.value}}
+        <input type="number" value="{{loanSum}}" min="500" max="58000" name="sum" id="sum" disabled #sum>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" id="month" name="month" min="3" max="60" required #term>
+        <input type="number" value="{{loanTime}}" id="month" name="month" min="3" max="60" disabled #term>
         <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
@@ -225,10 +225,25 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="245" step="5" name="salary" id="salary" required value="" #income>
+        <input type="number" value="{{incomeAmountPerson}}" min="245" step="5" name="salary" id="salary" required disabled #income>
       </div>
     </div>
   </div>
+
+  <!-- ZMONA -->
+  <div *ngIf="incomeAmountSpouse != 0 " class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label for="wife">ZMONA PAY<span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-2">
+      <div class="form-item">
+        <input type="number" value="{{incomeAmountSpouse}}" min="245" step="5" name="salary" id="wife" required disabled #income>
+      </div>
+    </div>
+  </div>
+
 
   <div class="form-item">
     <label><br></label>

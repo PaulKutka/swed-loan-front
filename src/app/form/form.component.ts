@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, Input} from "@angular/core";
 import {FormService} from "./form.service";
 import {DataService} from "./data.service";
 import {State} from "./states";
@@ -8,9 +8,15 @@ import {Country} from "./country";
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
+  inputs: ['loanSum'],
   providers: [FormService]
 })
 export class FormComponent implements OnInit {
+
+  @Input('loanSum') loanSum: number;
+  @Input('loanTime') loanTime: number;
+  @Input('incomeAmountPerson') incomeAmountPerson: number;
+  @Input('incomeAmountSpouse') incomeAmountSpouse: number;
 
   trackingNumber : any;
 

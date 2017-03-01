@@ -4,8 +4,7 @@
   </h3>
 </div>
 
-<app-calculator class=" form-hide"></app-calculator>
-<app-form ></app-form>
+<app-calculator ></app-calculator>
 
 <select class="max-w5" id="langSelect" #langSelect (change)="translate.use(langSelect.value)">
   <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang

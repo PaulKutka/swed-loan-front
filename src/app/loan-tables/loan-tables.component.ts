@@ -16,7 +16,6 @@ export class LoanTablesComponent implements OnInit {
   @Input('loanSumOutput') loanSumOutput: number;
 
   ngOnInit() {
-
   }
 
 }
