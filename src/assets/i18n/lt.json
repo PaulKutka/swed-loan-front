@@ -2,5 +2,68 @@
   "HOME": {
     "TITLE": "Vartojimo paskolos skačiuoklė",
     "SELECT": "Changer la langue"
+  },
+  "FIRST": {
+    "TITLE": "Informaciją apie paskolą",
+    "SUM": "Pageidaujama paskolos suma",
+    "PERIOD": "Paskolos laikotarpis",
+    "MĖN": "Mėn",
+    "FOR": "Paskolą imsiu",
+    "1": "Vienas",
+    "2": "Su sutuoktiniu (bendraskoliu)"
+  },
+
+  "SECOND":{
+    "TITLE": "Informaciją apie pajamas",
+    "INCOME": "Jūsų grynosios mėnesio pajamos",
+    "INCOME2": "Jūsų sutuoktinės/io grynosios mėnesio pajamos",
+    "MĖN": "Eur/Mėn",
+    "FINISH": "SKAIČIUOTI"
+  },
+
+  "CHECK":{
+    "TITLE": "Patikrinti paskolos statusą",
+    "FILL": "Įveskite turimą paskolos kodą",
+    "SEARCH": "Ieškoti",
+    "STATUS": "Statusas",
+    "CHECK" : "Nepatikrinta"
+  },
+
+  "LOANTABLES":{
+    "TITLE": "Preliminarus paskolos paskaičiavimas",
+    "FEE": "Sutarties sudarymo mokestis",
+    "FEE2": "Sutarties administravimo mokestis",
+    "COL1": "Mėnesis",
+    "COL2": "Likusi suma",
+    "COL3": "Mėnesinė įmoka",
+    "COL4": "Mėnesinė palūkanų suma",
+    "FINISH": "PILDYTI PARAIŠKĄ"
+
+  },
+
+  "FORM": {
+    "1": "Skaičiuoklė",
+    "2": "Formos pildymas",
+    "TITLE": "Asmens duomenys",
+    "SUM": "Paskolos suma",
+    "TERM": "Paskolos terminas",
+    "MĖN": "Mėnesiai",
+    "DAY": "Paskolos ir palūkanų mokėjimo diena",
+    "NAME": "Vardas",
+    "SURN": "Pavardė",
+    "CODE": "Asmens kodas",
+    "TYPE": "Asmens dokumento tipas",
+    "NR": "Dokumento numeris",
+    "CONTACT": "Kontaktiniai duomenys",
+    "COUNTRY": "Šalis",
+    "CITY": "Miestas",
+    "ADDRESS": "Adresas",
+    "TEL": "Telefonas",
+    "EMAIL": "Elektroninio pašto adresas",
+    "SALARY": "Mėnesinis atlyginimas atskaičius mokesčius",
+    "FINISH1": "Išsaugoti vėlesniam užbaigimui",
+    "FINISH2": "Pateikti",
+    "FINISH3": "Patvirtinimas",
+    "CODE": "Kodas"
   }
 }
