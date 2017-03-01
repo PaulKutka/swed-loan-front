@@ -24,6 +24,12 @@ $("body").delegate('.minimumTime', 'focusout', function(){
   }
 });
 
+$("body").delegate('.minimumTime', 'focusout', function(){
+  if($(this).val() > 60){
+    $(this).val('60');
+  }
+});
+
 
 
 $('.calculateButton').click(function(){
