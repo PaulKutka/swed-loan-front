@@ -2,5 +2,69 @@
   "HOME": {
     "TITLE": "Consumer Loans Calculator",
     "SELECT": "Change language"
-  }
-}
+  },
+
+  "FIRST":{
+    "TITLE": "Information about a loan",
+    "SUM": "Loan amount",
+    "PERIOD": "Loan term in months",
+    "MĖN": "Months",
+    "FOR": "I will take a loan",
+    "1": "alone",
+    "2": "with spouse"
+
+  },
+
+  "SECOND":{
+    "TITLE": "Information about income",
+    "INCOME": "Income per month",
+    "INCOME2": "Income per month of spouse",
+    "MĖN": "Eur/Month",
+    "FINISH": "CALCULATE"
+  },
+
+  "CHECK":{
+    "TITLE": "Check status",
+    "FILL": "Enter the code",
+    "SEARCH": "Search",
+    "STATUS": "Status",
+    "CHECK" : "Unchecked"
+  },
+
+  "LOANTABLES":{
+    "TITLE": "A preliminary calculation",
+    "FEE": "Contract award fee",
+    "FEE2": "Contract fee",
+    "COL1": "Month",
+    "COL2": "Balance",
+    "COL3": "Monthly payment",
+    "COL4": "Monthly interest amount",
+    "FINISH": "FILL APPLICATION"
+},
+
+
+  "FORM": {
+    "1": "Calculator",
+    "2": "Loan application",
+    "TITLE": "Personal data",
+    "SUM": "Loan amount",
+    "TERM": "Loan term in months",
+    "MĖN": "Months",
+    "DAY": "First day of payment",
+    "NAME": "First name",
+    "SURN": "Last name",
+    "CODE": "Personal code",
+    "TYPE": "Type of personal document",
+    "NR": "Number of document",
+    "CONTACT": "Contacts",
+    "COUNTRY": "Country",
+    "CITY": "City",
+    "ADDRESS": "Address",
+    "TEL": "Telefone number",
+    "EMAIL": "E-mail",
+    "SALARY": "Mountly salary without fee",
+    "FINISH1": "Save for later completion",
+    "FINISH2": "Submit",
+    "FINISH3": "Confirmation",
+    "CODE": "Code"
+  }}

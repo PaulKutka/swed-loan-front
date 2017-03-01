@@ -3,12 +3,12 @@
 
   <nav class="breadcrumbs">
     <ul>
-      <li><a [routerLink]="['/']">Skaičiuoklė</a></li>
-      <li><span>Formos pildymas</span></li>
+      <li><a [routerLink]="['/']">{{'FORM.1' | translate}}</a></li>
+      <li><span>{{'FORM.2' | translate}}</span></li>
     </ul>
   </nav>
 
-  <h4 class="text-left">Asmens duomenys</h4>
+  <h4 class="text-left">{{'FORM.TITLE' | translate}}</h4>
   <hr>
   <br>
 
@@ -16,7 +16,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Paskolos suma <span class="req">*</span></label>
+        <label>{{'FORM.SUM' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-2">
@@ -30,21 +30,16 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Paskolos terminas <span class="req">*</span></label>
+        <label>{{'FORM.TERM' | translate}} <span class="req">*</span></label>
       </div>
     </div>
+
+
 
     <div class="col col-2">
       <div class="form-item">
         <select><option>---</option></select>
-        <div class="desc">metai</div>
-      </div>
-    </div>
-
-    <div class="col col-2">
-      <div class="form-item">
-        <select><option>---</option></select>
-        <div class="desc">mėnesiai</div>
+        <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
   </div>
@@ -53,7 +48,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Paskolos ir palūkanų mokėjimo diena <span class="req">*</span></label>
+        <label>{{'FORM.DAY' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-1">
@@ -69,7 +64,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Vardas <span class="req">*</span></label>
+        <label>{{'FORM.NAME' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -83,7 +78,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Pavardė <span class="req">*</span></label>
+        <label>{{'FORM.SURN' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -97,7 +92,7 @@
   <div class="row gutters ">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Asmens kodas <span class="req">*</span></label>
+        <label>{{'FORM.CODE' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -111,7 +106,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Asmens dokumento tipas <span class="req">*</span></label>
+        <label>{{'FORM.TYPE' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -125,7 +120,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Dokumento numeirs <span class="req">*</span></label>
+        <label>{{'FORM.NR' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -135,7 +130,7 @@
     </div>
   </div>
 
-  <h4 class="text-left">Kontaktiniai duomenys</h4>
+  <h4 class="text-left">{{'FORM.CONTACT' | translate}}</h4>
   <hr>
   <br>
 
@@ -143,7 +138,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Šalis <span class="req">*</span></label>
+        <label>{{'FORM.COUNTRY' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -157,7 +152,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Miestas ar apskritis <span class="req">*</span></label>
+        <label>{{'FORM.CITY' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -171,7 +166,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Adresas<span class="req">*</span></label>
+        <label>{{'FORM.ADDRESS' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -185,11 +180,10 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Telefonas 1 <span class="req">*</span></label>
+        <label>{{'FORM.TEL' | translate}}  <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-1">
-      <select><option>+370</option></select>
     </div>
     <div class="col col-2">
       <input type="text" name="" value="">
@@ -201,7 +195,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>El.paštas <span class="req">*</span></label>
+        <label>{{'FORM.EMAIL' | translate}} <span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-4">
@@ -215,7 +209,7 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-        <label>Mėnesinis atlyginimas atskaičius mokesčius <span class="req">*</span></label>
+        <label>{{'FORM.SALARY' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-2">
@@ -227,8 +221,8 @@
 
   <div class="form-item">
     <label><br></label>
-    <button data-component="modal" data-target="#confirmation-modal">Išsaugoti vėlesniam užbaigimui</button>
-    <button data-component="modal" data-target="#confirmation-modal">Pateikti</button>
+    <button data-component="modal" data-target="#confirmation-modal">{{'FORM.FINISH1' | translate}}</button>
+    <button data-component="modal" data-target="#confirmation-modal">{{'FORM.FINISH2' | translate}}</button>
   </div>
 
 </div>
@@ -239,10 +233,10 @@
   <div class="modal">
     <span class="close"></span>
     <div class="modal-header">
-      <h3>Patvirtinimas</h3>
+      <h3>{{'FORM.FINISH3' | translate}}</h3>
     </div>
     <div class="modal-body">
-      <h3>Kodas:
+      <h3>{{'FORM.CODE' | translate}}:
         <span class="code">616813asd1a5</span>
       </h3>
     </div>
