@@ -10,7 +10,7 @@ import {LoanStatusService} from "./loan-status.service";
 export class LoanStatusComponent implements OnInit {
 
   trackingNumber: string = "";
-  loansStatus: any = ' ';
+  loansStatus: any = 'Not found';
   error: any;
 
   constructor(private loanStatus: LoanStatusService) {
@@ -20,9 +20,10 @@ export class LoanStatusComponent implements OnInit {
   }
 
   searchLoan() {
+    this.loansStatus = 'Not Found';
     this.loanStatus.getLoan(this.trackingNumber)
       .then(loansStatus => {
-        this.loansStatus = loansStatus;
+        this.loansStatus = loansStatus.status;
         console.log(loansStatus);
       }).catch(error => {
       this.error = error;
