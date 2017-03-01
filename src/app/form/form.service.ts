@@ -23,22 +23,24 @@ export class FormService {
     address:string,
     phone:number,
     email:string,
+    income: number,
     ) {
     return this.http
       .post("https://api-swed-loan.herokuapp.com/loans/add", ({
-        "loan_amount": sum,
-        "loan_term": term,
-        "loan_payday": day,
-        "client_name": name,
-        "client_surname": lastName,
-        "client_personal_code": personalCode,
-        "client_personal_document_number": documentNumber,
-        "client_personal_document_type": personalDocumentType,
+        "loanAmount": sum,
+        "loanTerm": term,
+        "loanPayday": day,
+        "clientName": name,
+        "clientSurname": lastName,
+        "clientPersonalCode": personalCode,
+        "clientPersonalDocumentNumber": documentNumber,
+        "clientPersonalDocumentType": personalDocumentType,
         "country": country,
         "city": city,
         "address": address,
-        "phone_number": phone,
+        "phoneNumber": phone,
         "email": email,
+        "income": income,
       }), {headers: this.headers})
       .toPromise()
       // .then(res => res.json().data)
@@ -50,5 +52,18 @@ export class FormService {
     return Promise.reject(error.message || error);
   }
 
-
+  // "loanAmount": sum,
+  // "loanTerm": term,
+  // "loanPayday": day,
+  // "clientName": name,
+  // "clientSurname": lastName,
+  // "clientPersonalCode": personalCode,
+  // "clientPersonalDocumentNumber": documentNumber,
+  // "clientPersonalDocumentType": personalDocumentType,
+  // "country": country,
+  // "city": city,
+  // "address": address,
+  // "phoneNumber": phone,
+  // "email": email,
+  // "income": 245,
 }
