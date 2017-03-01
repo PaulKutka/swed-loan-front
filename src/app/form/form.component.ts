@@ -9,17 +9,16 @@ import {FormService} from "./form.service";
 })
 export class FormComponent implements OnInit {
 
-  constructor(private service : FormService) {
-    this.reloadPage();
-  }
+  trackingNumber : any;
+
+  constructor(private service : FormService) { }
 
   ngOnInit() {
-
   }
 
-  reloadPage() {
-    window.location.reload();
-  }
+  getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
   onSubmit(sum:number,
            term:number,
@@ -38,6 +37,8 @@ export class FormComponent implements OnInit {
   ){
 
 
+
+    this.trackingNumber = this.getRandomInt(100, 999).toString()+''+this.getRandomInt(100, 999).toString()+''+this.getRandomInt(100, 999).toString();
     // console.log(country, term, day, name, lastName, personalCode, personalDocumentType, documentNumber, country, city, address,
     // phone, email);
 
@@ -54,7 +55,8 @@ this.service.create(sum,
   address,
   phone,
   email,
-income);
+income,
+this.trackingNumber);
   }
 
 }
