@@ -11,6 +11,8 @@ import {LoanStatusComponent} from './loan-status/loan-status.component';
 import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {DataService} from "./form/data.service";
+import {FormService} from "./form/form.service";
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -40,7 +42,7 @@ export function createTranslateLoader(http: Http) {
 
     APP_ROUTES_PROVIDER
   ],
-  providers: [AppComponent],
+  providers: [AppComponent, DataService,FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
