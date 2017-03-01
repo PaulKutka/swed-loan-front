@@ -10,51 +10,18 @@
       <th>Vartotojas</th>
       <th>Statusas</th>
       <th>Terminas</th>
+      <th>Redaguoti</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>500</td>
-      <td>Kazys</td>
-      <td>
-          <select class="max-w50">
-            <option value="confirm">Patvirtintas</option>
-            <option value="waiting">Laukiamas patvirtinimo</option>
-            <option value="declined">Nepatvirtintas</option>
-          </select>
-      </td>
-      <td>60</td>
-    </tr>
-    <tr>
-      <td>9500</td>
-      <td>Petras</td>
-      <td>
-        <select class="max-w50">
-          <option value="confirm">Patvirtintas</option>
-          <option value="waiting">Laukiamas patvirtinimo</option>
-          <option value="declined">Nepatvirtintas</option>
-        </select>
-      </td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td>25500</td>
-      <td>Stasys</td>
-      <td>
-        <select class="max-w50">
-          <option value="confirm">Patvirtintas</option>
-          <option value="waiting">Laukiamas patvirtinimo</option>
-          <option value="declined">Nepatvirtintas</option>
-        </select>
-      </td>
-      <td>5</td>
-    </tr>
-
     <tr *ngFor="let list of adminPanels">
       <td>{{list.loanAmount}}</td>
       <td>{{list.clientName}}</td>
       <td>{{list.status}}</td>
       <td>{{list.loanTerm}}</td>
+      <td>
+        <button data-component="modal" data-target="#my-modal">Redaguoti</button>
+      </td>
     </tr>
 
 
@@ -63,3 +30,11 @@
 
 </div>
 
+
+<div id="my-modal" class="modal-box hide">
+  <div class="modal">
+    <span class="close"></span>
+    <div class="modal-header">Modal Header</div>
+    <div class="modal-body">...</div>
+  </div>
+</div>
