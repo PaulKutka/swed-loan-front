@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from "@angular/core";
 import {Payment} from "../calculator/payment";
+import {$} from "protractor";
 
 @Component({
   selector: 'app-loan-tables',
@@ -14,10 +15,10 @@ export class LoanTablesComponent implements OnInit {
   @Input('loanSumOutput') loanSumOutput: number;
 
   constructor() {
-
   }
 
   ngOnInit() {
   }
+
 
 }
