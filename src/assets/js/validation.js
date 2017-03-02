@@ -16,12 +16,9 @@ $(document).ready(function () {
       },
       "code": {
         required: true,
-        minlength: 11,
-        min: 1111111111
       },
       "month": {
         required: true,
-        maxlength: 2,
         min: 3,
         max: 60
       },
@@ -29,23 +26,16 @@ $(document).ready(function () {
         required: true,
         min: 1,
         max: 28,
-        maxlength: 2,
-        minlength: 1
       },
       "phone": {
         required: true,
         minlength: 8,
         maxlength: 12,
-        min: 10000000,
-        max: 1000000000
       },
       "surname": {
         required: true,
         minlength: 3
       },
-      "number":{
-        max: 99999999
-      }
     },
     messages: {
       "name": {
@@ -59,9 +49,7 @@ $(document).ready(function () {
         email: "Email is invalid"
       },
       "code": {
-        required: "Please, enter an valid code",
-        min: "Please, enter a bigger value",
-        max: "Please, enter a smaller value"
+        required: "Please, enter an valid code"
       },
       "month": {
         required: "Please, enter a valid month",
@@ -74,8 +62,7 @@ $(document).ready(function () {
         maxlength: "Please, enter a smaller value"
       },
       "phone" : {
-        min: "Please, enter a bigger value",
-        max: "Please, enter a smaller value"
+        min: "Please, enter a smaller value"
       }
     }
 

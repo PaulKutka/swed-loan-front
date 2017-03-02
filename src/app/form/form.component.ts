@@ -60,11 +60,10 @@ export class FormComponent implements OnInit {
 
 
 
-    if(personalCode < 1000000000
-        || address == ''
-      || day > 28
+    if(personalCode < 10000000
+      || day > 28 
       || documentNumber < 10000000
-      || phone < 1000000000000) {
+      || phone < 100000000) {
       this.trackingNumber = "Submit failed"
     } else {
       this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();
