@@ -59,25 +59,30 @@ export class FormComponent implements OnInit {
            income: number,) {
 
 
-    this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();
+
+    if(personalCode == 0){
+      this.trackingNumber = "Submit failed"
+    } else {
+      this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();
+      this.service.create(sum,
+        term,
+        day,
+        name,
+        lastName,
+        personalCode,
+        personalDocumentType,
+        documentNumber,
+        country,
+        city,
+        address,
+        phone,
+        email,
+        income,
+        this.trackingNumber);
+    }
+    }
 
 
-    this.service.create(sum,
-      term,
-      day,
-      name,
-      lastName,
-      personalCode,
-      personalDocumentType,
-      documentNumber,
-      country,
-      city,
-      address,
-      phone,
-      email,
-      income,
-      this.trackingNumber);
-  }
 
   // onSubmitt(){
   //   this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();

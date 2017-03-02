@@ -49,3 +49,6 @@ $('.calculateButton').click(function () {
   $('.app-loan-tables').removeClass('hidden');
 });
 
+function showValues(){
+  window.scrollTo(500, 500);
+}
