@@ -61,8 +61,8 @@ export class FormComponent implements OnInit {
 
 
     if(personalCode < 10000000
-      || day > 28 
-      || documentNumber < 10000000
+      || day > 28
+      || documentNumber < 100000
       || phone < 100000000) {
       this.trackingNumber = "Submit failed"
     } else {
