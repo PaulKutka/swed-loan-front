@@ -1,14 +1,16 @@
+
 import {Component, OnInit, Input} from "@angular/core";
 import {FormService} from "./form.service";
-import {DataService} from "./data.service";
-import {State} from "./states";
 import {Country} from "./country";
+import {State} from "./states";
+import {DataService} from "./data.service";
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
-  inputs: ['loanSum'],
+  inputs: ['loanSum','loanTime','incomeAmountPerson',
+  'incomeAmountSpouse'],
   providers: [FormService]
 })
 export class FormComponent implements OnInit {
@@ -31,6 +33,7 @@ export class FormComponent implements OnInit {
   onSelect(countryid) {
     this.states = this._dataService.getStates().filter((item)=> item.countryid == countryid);
   }
+
   ngOnInit() {
   }
 

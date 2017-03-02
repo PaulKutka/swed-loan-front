@@ -150,7 +150,8 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select [ngModelOptions]="{standalone:true}" [(ngModel)]="selectedCountry.id" (change)="onSelect($event.target.value)" #country>
+        <select [ngModelOptions]="{standalone:true}" [(ngModel)]="selectedCountry.id"
+                (change)="onSelect($event.target.value)" #country>
           <option value="0">--Select--</option>
           <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
         </select>
@@ -197,7 +198,7 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="number" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone" #phoneNumber>
+      <input type="number" maxlength="12" minlength="8" name="phone" required id="phone" #phoneNumber>
     </div>
   </div>
 
