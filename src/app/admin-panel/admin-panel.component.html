@@ -30,12 +30,12 @@
       <td>{{list.loanTerm}}</td>
       <td>
         <button data-component="modal"
-                [attr.data-target]="'#' + list.clientName">Redaguoti
+                [attr.data-target]="'#' + list.loanId">Redaguoti
         </button>
       </td>
 
       <!-- Modal Edition-->
-      <div id="{{list.clientName}}" class="modal-box hide"  >
+      <div id="{{list.loanId}}" class="modal-box hide"  >
         <div class="modal">
           <span class="close"></span>
           <div class="modal-header">
