@@ -1,4 +1,4 @@
-<div class="form form-border formMain"  id="form">
+<form class="form form-border formMain"  id="form">
 
 
   <nav class="breadcrumbs">
@@ -22,7 +22,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" name="sum" id="sum"   name="name"
+        <input type="number" min="500" max="58000" disabled name="sum" id="sum"   name="name"
                #sum value="{{loanSum}}" >
       </div>
     </div>
@@ -39,7 +39,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" value="{{loanTime}}" id="month" name="month" min="3" max="60"  required  #term>
+        <input type="number" value="{{loanTime}}"  disabled id="month" name="month" min="3" max="60"  required  #term>
         <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
@@ -267,7 +267,7 @@
 
 
 
-</div>
+</form>
 
 
 <!-- Confirmation modal-->
