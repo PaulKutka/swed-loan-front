@@ -123,7 +123,7 @@
     </div>
   </div>
 
-  <!-- Asmens dokumento tipas-->
+  <!-- Asmens dokumento ilgis-->
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
@@ -132,7 +132,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number" id="number" name="number" minlength="7" maxlength="8" required  #documentNumber>
+        <input type="number" id="number" name="number" minlength="10000000" max="99999999" required  #documentNumber>
       </div>
     </div>
   </div>
@@ -198,7 +198,7 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone"  #phoneNumber>
+      <input type="text" maxlength="12" minlength="8" name="phone" required id="phone"  #phoneNumber>
     </div>
   </div>
 
@@ -261,10 +261,11 @@
             address.value,
             phoneNumber.value,
             email.value,
-            income.value)"> {{'FORM.FINISH2' | translate}}</button>
+            income.value)"
+            onclick="showValues()"> {{'FORM.FINISH2' | translate}}</button>
   </div>
 
-  <div *ngIf="trackingNumber > 0">
+  <div *ngIf="trackingNumber > 0 || trackingNumber == 'Submit Failed'" >
     <h3>Confirmation Code: {{trackingNumber}}</h3>
   </div>
 
