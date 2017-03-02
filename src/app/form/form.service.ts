@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from "@angular/http";
+import {Http, Headers, Response} from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 import {Form} from "./form";
+
 
 @Injectable()
 export class FormService {
@@ -11,9 +12,24 @@ export class FormService {
   constructor(private http:Http) { }
 
 
-  createLoan(model: Form){
-    console.log(model);
-    return this.http.post("https://api-swed-loan.herokuapp.com/loans/add", model, {headers: this.headers})
+  createLoan(model : Form, trackingNumber : string){
+    return this.http.post("https://api-swed-loan.herokuapp.com/loans/add", ({
+      "loanAmount": model.sum,
+      "loanTerm": model.term,
+      "loanPayday": model.payDay,
+      "clientName": model.name,
+      "clientSurname": model.surName,
+      "clientPersonalCode": model.personalCode,
+      "clientPersonalDocumentNumber": model.documentNumber,
+      "clientPersonalDocumentType": model.documentType,
+      "country": model.country,
+      "city": model.city,
+      "address": model.address,
+      "phoneNumber": model.phoneNumber,
+      "email": model.email,
+      "income": model.income,
+      "trackingNumber": trackingNumber,
+    }), {headers: this.headers})
       .toPromise()
       // .then(res => res.json().data)
       .catch(this.handleError);

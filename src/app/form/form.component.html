@@ -113,7 +113,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select name="type" id="type" required [(ngModel)]="model.documentType" #documentType="ngModel" >
+        <select name="type" id="type"required [(ngModel)]="model.documentType" #documentType="ngModel" >
           <option>{{'FORM.PASSPORT' | translate}}</option>
           <option>{{'FORM.CARD' | translate}}</option>
           <option>{{'FORM.PERM' | translate}}</option>
@@ -196,7 +196,7 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="number" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone" [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel">
+      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone" [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel">
     </div>
   </div>
 

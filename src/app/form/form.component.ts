@@ -75,7 +75,8 @@ export class FormComponent implements OnInit {
   }
 
   onSubmitt(){
-    this.service.createLoan(this.model);
+    this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();
+    this.service.createLoan(this.model, this.trackingNumber);
   }
 
 
