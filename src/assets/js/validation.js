@@ -16,9 +16,8 @@ $(document).ready(function () {
       },
       "code": {
         required: true,
-        maxlength: 11,
         minlength: 11,
-        min: 10000000000
+        min: 1111111111
       },
       "month": {
         required: true,
@@ -45,10 +44,7 @@ $(document).ready(function () {
         minlength: 3
       },
       "number":{
-        min: 1000000,
-        max: 99999999,
-        minlength: 11,
-        maxlength: 11
+        max: 99999999
       }
     },
     messages: {
