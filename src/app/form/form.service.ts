@@ -13,6 +13,23 @@ export class FormService {
 
 
   createLoan(model : Form, trackingNumber : string){
+    console.log({
+      "loanAmount": model.sum,
+      "loanTerm": model.term,
+      "loanPayday": model.payDay,
+      "clientName": model.name,
+      "clientSurname": model.surName,
+      "clientPersonalCode": model.personalCode,
+      "clientPersonalDocumentNumber": model.documentNumber,
+      "clientPersonalDocumentType": model.documentType,
+      "country": model.country,
+      "city": model.city,
+      "address": model.address,
+      "phoneNumber": model.phoneNumber,
+      "email": model.email,
+      "income": model.income,
+      "trackingNumber": trackingNumber,
+    });
     return this.http.post("https://api-swed-loan.herokuapp.com/loans/add", ({
       "loanAmount": model.sum,
       "loanTerm": model.term,

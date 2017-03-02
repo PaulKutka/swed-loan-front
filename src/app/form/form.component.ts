@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
   @Input('incomeAmountSpouse') incomeAmountSpouse: number;
 
 
-  model = new Form(0, 0, 0, "", "", "", "", "", "", "", "", "", "", 0);
+  model : Form;
 
   selectedCountry: Country = new Country(0, 'Lietuva');
   countries: Country[];
@@ -36,6 +36,7 @@ export class FormComponent implements OnInit {
     this.states = this._dataService.getStates().filter((item) => item.countryid == countryid);
   }
   ngOnInit() {
+    this.model = new Form(this.loanSum, this.loanTime, 0, "", "", "", "", "", "", "", "", "", "", this.incomeAmountPerson);
   }
 
   getRandomInt(min, max) {
