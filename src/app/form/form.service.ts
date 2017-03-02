@@ -13,46 +13,49 @@ export class FormService {
 
 
 
-  createLoan(model : Form, trackingNumber : string){
-    console.log({
-      "loanAmount": model.sum,
-      "loanTerm": model.term,
-      "loanPayday": model.payDay,
-      "clientName": model.name,
-      "clientSurname": model.surName,
-      "clientPersonalCode": model.personalCode,
-      "clientPersonalDocumentNumber": model.documentNumber,
-      "clientPersonalDocumentType": model.documentType,
-      "country": model.country,
-      "city": model.city,
-      "address": model.address,
-      "phoneNumber": model.phoneNumber,
-      "email": model.email,
-      "income": model.income,
-      "trackingNumber": trackingNumber,
-    });
-    return this.http.post("https://api-swed-loan.herokuapp.com/loans/add", ({
-      "loanAmount": model.sum,
-      "loanTerm": model.term,
-      "loanPayday": model.payDay,
-      "clientName": model.name,
-      "clientSurname": model.surName,
-      "clientPersonalCode": model.personalCode,
-      "clientPersonalDocumentNumber": model.documentNumber,
-      "clientPersonalDocumentType": model.documentType,
-      "country": model.country,
-      "city": model.city,
-      "address": model.address,
-      "phoneNumber": model.phoneNumber,
-      "email": model.email,
-      "income": model.income,
-      "trackingNumber": trackingNumber,
-    }), {headers: this.headers})
-      .toPromise()
-      // .then(res => res.json().data)
-      .catch(this.handleError);
-  };
-
+  // createLoan(model : Form, trackingNumber : string){
+  //
+  //
+  //  console.log
+  //   console.log({
+  //     "loanAmount": model.sum,
+  //     "loanTerm": model.term,
+  //     "loanPayday": model.payDay,
+  //     "clientName": model.name,
+  //     "clientSurname": model.surName,
+  //     "clientPersonalCode": model.personalCode,
+  //     "clientPersonalDocumentNumber": model.documentNumber,
+  //     "clientPersonalDocumentType": model.documentType,
+  //     "country": countries[+model.country],
+  //     "city": cities[+model.city],
+  //     "address": model.address,
+  //     "phoneNumber": model.phoneNumber,
+  //     "email": model.email,
+  //     "income": model.income,
+  //     "trackingNumber": trackingNumber,
+  //   });
+  //   return this.http.post("https://api-swed-loan.herokuapp.com/loans/add", ({
+  //     "loanAmount": model.sum,
+  //     "loanTerm": model.term,
+  //     "loanPayday": model.payDay,
+  //     "clientName": model.name,
+  //     "clientSurname": model.surName,
+  //     "clientPersonalCode": model.personalCode,
+  //     "clientPersonalDocumentNumber": model.documentNumber,
+  //     "clientPersonalDocumentType": model.documentType,
+  //     "country": countries[model.country],
+  //     "city": cities[model.city],
+  //     "address": model.address,
+  //     "phoneNumber": model.phoneNumber,
+  //     "email": model.email,
+  //     "income": model.income,
+  //     "trackingNumber": trackingNumber,
+  //   }), {headers: this.headers})
+  //     .toPromise()
+  //     // .then(res => res.json().data)
+  //     .catch(this.handleError);
+  // };
+  //
   create(
     sum:number,
     term:number,
@@ -70,6 +73,10 @@ export class FormService {
     income: number,
     trackingNumber: string,
     ) {
+
+    var countries = ["", "Lithuania", "Poland", "Sweden"];
+    var cities = ["", "Vilnius", "Kaunas", "Panevežys", "Warsaw", "Gdansk", "Zakopane", "Stockholm", "Gothenburg", "Malmö"];
+
     console.log({
       "loanAmount": +sum,
       "loanTerm": +term,
@@ -79,8 +86,8 @@ export class FormService {
       "clientPersonalCode": +personalCode,
       "clientPersonalDocumentNumber": +documentNumber,
       "clientPersonalDocumentType": personalDocumentType,
-      "country": country,
-      "city": city,
+      "country": countries[country],
+      "city": cities[city],
       "address": address,
       "phoneNumber": phone,
       "email": email,
@@ -97,8 +104,8 @@ export class FormService {
         "clientPersonalCode": +personalCode,
         "clientPersonalDocumentNumber": +documentNumber,
         "clientPersonalDocumentType": personalDocumentType,
-        "country": country,
-        "city": city,
+        "country": countries[country],
+        "city": cities[city],
         "address": address,
         "phoneNumber": phone,
         "email": email,
