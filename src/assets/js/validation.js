@@ -7,7 +7,8 @@ $(document).ready(function () {
       },
       "sum": {
         required: true,
-        min: 500
+        min: 500,
+        max: 580000
       },
       "email": {
         required: true,
@@ -16,7 +17,8 @@ $(document).ready(function () {
       "code": {
         required: true,
         maxlength: 11,
-        minlength: 11
+        minlength: 11,
+        min: 10000000000
       },
       "month": {
         required: true,
@@ -40,6 +42,9 @@ $(document).ready(function () {
         required: true,
         minlength: 3
       },
+      "number":{
+        min: 1000000
+      }
     },
     messages: {
       "name": {
