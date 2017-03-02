@@ -106,8 +106,9 @@
             <br>
             <hr>
 
+
             <h5>Statusas</h5>
-            <select class="max-w50" #status>
+            <select  class="max-w50" #status>
               <option value="Confirm">Patvirtintas</option>
               <option value="Pending">Laukiamas patvirtinimo</option>
               <option value="Declined">Nepatvirtintas</option>
@@ -116,14 +117,14 @@
             <br>
             <hr>
 
-            <div class="editButtons">
-              <button (click)="changeStatus(status.value, list.loanId) " data-action="modal-close" class="button">Patvirtinti</button>
+            <div  class="editButtons" >
+              <button (click)="changeStatus(status.value, list.loanId)">a</button>
+              <button   data-action="modal-close" class="button">Patvirtinti</button>
               <button class="button outline" data-action="modal-close" >Atmesti</button>
             </div>
           </div>
         </div>
         </div>
-
     </tr>
 
 

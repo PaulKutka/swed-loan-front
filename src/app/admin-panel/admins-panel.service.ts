@@ -18,6 +18,8 @@ export class AdminsPanelService {
   }
 
   changeStatus(status : string, id:number){
+    console.log(status);
+    console.log(id);
     return this.http.put("https://api-swed-loan.herokuapp.com/loans/"+id+"/edit", ({
       "status" : status,
     }), {headers: this.headers})
