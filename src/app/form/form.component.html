@@ -1,4 +1,4 @@
-<form class="form form-border formMain" (ngSubmit)="onSubmitt()" #applicationForm="ngForm" id="form">
+<div class="form form-border formMain"  id="form">
 
 
   <nav class="breadcrumbs">
@@ -22,8 +22,8 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" name="sum" id="sum"  [(ngModel)]="model.sum" name="name"
-               #name="ngModel" value="{{loanSum}}" disabled>
+        <input type="number" min="500" max="58000" name="sum" id="sum"   name="name"
+               #sum value="{{loanSum}}" >
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" value="{{loanTime}}" id="month" name="month" min="3" max="60" disabled required [(ngModel)]="model.term" #term="ngModel">
+        <input type="number" value="{{loanTime}}" id="month" name="month" min="3" max="60"  required  #term>
         <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
@@ -54,7 +54,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" id="day" name="day" min="1" max="28" required [(ngModel)]="model.payDay" #payDay="ngModel">
+        <input type="number" id="day" name="day" min="1" max="28" required #payDay>
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="name" id="name" required [(ngModel)]="model.name" #name="ngModel" >
+        <input type="text" name="name" id="name" required  #name >
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="surname" id="surname" [(ngModel)]="model.surName" #surName="ngModel" required >
+        <input type="text" name="surname" id="surname"  #surName required >
       </div>
     </div>
   </div>
@@ -100,7 +100,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="code" id="code" maxlength="11" required [(ngModel)]="model.personalCode" #personalCode="ngModel">
+        <input type="text" name="code" id="code" maxlength="11" required #personalCode>
       </div>
     </div>
   </div>
@@ -114,7 +114,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select name="type" id="type"required [(ngModel)]="model.documentType" #documentType="ngModel" >
+        <select name="type" id="type"required  #documentType >
           <option value="{{'FORM.PASSPORT' | translate}}">{{'FORM.PASSPORT' | translate}}</option>
           <option value="{{'FORM.CARD' | translate}}">{{'FORM.CARD' | translate}}</option>
           <option value="{{'FORM.PERM' | translate}}">{{'FORM.PERM' | translate}}</option>
@@ -132,7 +132,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number" id="number" name="number" minlength="7" maxlength="8" required [(ngModel)]="model.documentNumber" #documentNumber="ngModel" >
+        <input type="number" id="number" name="number" minlength="7" maxlength="8" required  #documentNumber>
       </div>
     </div>
   </div>
@@ -150,7 +150,8 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select  [(ngModel)]="model.country" (change)="onSelect($event.target.value)" #country="ngModel" name="country" required>
+        <select [ngModelOptions]="{standalone:true}" [(ngModel)]="selectedCountry.id"
+                (change)="onSelect($event.target.value)" #country>
           <option value="0">--Select--</option>
           <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
         </select>
@@ -167,13 +168,13 @@
     </div>
     <div class="col col-4">
       <div class="form-item ">
-          <select required [(ngModel)]="model.city" #city="ngModel" name="city">
-            <option *ngIf='selectedCountry.id == 0' value="0">--Select--</option>
-            <option *ngFor="let state of states " value= {{state.name}}>{{state.name}}</option>
-          </select>
-        </div>
+        <select required #city>
+          <option *ngIf='selectedCountry.id == 0' value="0">--Select--</option>
+          <option *ngFor="let state of states " value= {{state.id}}>{{state.name}}</option>
+        </select>
       </div>
     </div>
+  </div>
 
   <!-- Adresas-->
   <div class="row gutters">
@@ -184,7 +185,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="text" name="address" id="address"  required [(ngModel)]="model.address" #address="ngModel" >
+        <input type="text" name="address" id="address"  required  #address >
       </div>
     </div>
   </div>
@@ -197,7 +198,7 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone" [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel">
+      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone"  #phoneNumber>
     </div>
   </div>
 
@@ -211,7 +212,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="email" id="email" name="email"  [(ngModel)]="model.email" #email="ngModel" required>
+        <input type="email" id="email" name="email"   #email required>
       </div>
     </div>
   </div>
@@ -225,7 +226,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" value="{{incomeAmountPerson}}" min="245" step="5" name="salary" id="salary" required value="" [(ngModel)]="model.income" disabled  #income="ngModel" >
+        <input type="number" value="{{incomeAmountPerson}}" min="245" step="5" name="salary" id="salary" required  disabled #income >
       </div>
     </div>
   </div>
@@ -239,7 +240,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" value="{{incomeAmountSpouse}}" min="245" step="5" name="salary" id="wife" required disabled #income>
+        <input type="number" value="{{incomeAmountSpouse}}" min="245" step="5" name="salary" id="wife" required disabled #incomeSpouse>
       </div>
     </div>
   </div>
@@ -247,26 +248,26 @@
   <div class="form-item">
     <label><br></label>
     <button data-component="modal" data-target="#confirmation-modal">{{'FORM.FINISH1' | translate}}</button>
-    <button type="submit"> {{'FORM.FINISH2' | translate}}</button>
+    <button type="submit"   (click)="onSubmit(
+            sum.value,
+            term.value,
+            payDay.value,
+            name.value,
+            surName.value,
+            personalCode.value,
+            documentType.value,
+            documentNumber.value,
+            country.value,
+            city.value,
+            address.value,
+            phoneNumber.value,
+            email.value,
+            income.value)"> {{'FORM.FINISH2' | translate}}</button>
   </div>
 
-  <!--(click)="onSubmit(-->
-  <!--sum.value,-->
-  <!--term.value,-->
-  <!--payDay.value,-->
-  <!--name.value,-->
-  <!--surName.value,-->
-  <!--personalCode.value,-->
-  <!--documentType.value,-->
-  <!--documentNumber.value,-->
-  <!--country.value,-->
-  <!--city.value,-->
-  <!--address.value,-->
-  <!--phoneNumber.value,-->
-  <!--email.value,-->
-  <!--income.value)">-->
 
-</form>
+
+</div>
 
 
 <!-- Confirmation modal-->

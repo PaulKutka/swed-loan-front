@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
   @Input('incomeAmountSpouse') incomeAmountSpouse: number;
 
 
-  model = new Form(0, 0, 0, "", "", "", "", "", "", "", "", "", "", 0);
+ // model = new Form(0, 0, 0, "", "", "", 0, 0, "", "", "", "", "", 0);
 
   selectedCountry: Country = new Country(0, 'Lietuva');
   countries: Country[];
@@ -79,10 +79,10 @@ export class FormComponent implements OnInit {
       this.trackingNumber);
   }
 
-  onSubmitt(){
-    this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();
-    this.service.createLoan(this.model, this.trackingNumber);
-  }
+  // onSubmitt(){
+  //   this.trackingNumber = this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString() + '' + this.getRandomInt(100, 999).toString();
+  //   this.service.createLoan(this.model, this.trackingNumber);
+  // }
 
 
   // showFormControls(form: any) {

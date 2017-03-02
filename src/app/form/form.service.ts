@@ -12,7 +12,25 @@ export class FormService {
   constructor(private http:Http) { }
 
 
+
   createLoan(model : Form, trackingNumber : string){
+    console.log({
+      "loanAmount": model.sum,
+      "loanTerm": model.term,
+      "loanPayday": model.payDay,
+      "clientName": model.name,
+      "clientSurname": model.surName,
+      "clientPersonalCode": model.personalCode,
+      "clientPersonalDocumentNumber": model.documentNumber,
+      "clientPersonalDocumentType": model.documentType,
+      "country": model.country,
+      "city": model.city,
+      "address": model.address,
+      "phoneNumber": model.phoneNumber,
+      "email": model.email,
+      "income": model.income,
+      "trackingNumber": trackingNumber,
+    });
     return this.http.post("https://api-swed-loan.herokuapp.com/loans/add", ({
       "loanAmount": model.sum,
       "loanTerm": model.term,
@@ -52,22 +70,39 @@ export class FormService {
     income: number,
     trackingNumber: string,
     ) {
+    console.log({
+      "loanAmount": +sum,
+      "loanTerm": +term,
+      "loanPayday": +day,
+      "clientName": name,
+      "clientSurname": lastName,
+      "clientPersonalCode": +personalCode,
+      "clientPersonalDocumentNumber": +documentNumber,
+      "clientPersonalDocumentType": personalDocumentType,
+      "country": country,
+      "city": city,
+      "address": address,
+      "phoneNumber": phone,
+      "email": email,
+      "income": +income,
+      "trackingNumber": trackingNumber,
+    });
     return this.http
       .post("https://api-swed-loan.herokuapp.com/loans/add", ({
-        "loanAmount": sum,
-        "loanTerm": term,
-        "loanPayday": day,
+        "loanAmount": +sum,
+        "loanTerm": +term,
+        "loanPayday": +day,
         "clientName": name,
         "clientSurname": lastName,
-        "clientPersonalCode": personalCode,
-        "clientPersonalDocumentNumber": documentNumber,
+        "clientPersonalCode": +personalCode,
+        "clientPersonalDocumentNumber": +documentNumber,
         "clientPersonalDocumentType": personalDocumentType,
         "country": country,
         "city": city,
         "address": address,
         "phoneNumber": phone,
         "email": email,
-        "income": income,
+        "income": +income,
         "trackingNumber": trackingNumber,
         // "loanAmount": 500,
         // "loanTerm": 25,
