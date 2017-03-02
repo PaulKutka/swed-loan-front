@@ -16,13 +16,12 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
-
         <label for="sum">{{'FORM.SUM' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="500" max="58000" name="sum" id="sum"  [(ngModel)]="model.sum" name="name"
+        <input type="number" min="500" max="58000" name="sum" id="sum"  [(ngModel)]="model.sum"
                #name="ngModel" value="{{loanSum}}" disabled>
       </div>
     </div>
@@ -114,7 +113,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select name="type" id="type"required [(ngModel)]="model.documentType" #documentType="ngModel" >
+        <select name="type" id="type" required [(ngModel)]="model.documentType" #documentType="ngModel" >
           <option value="{{'FORM.PASSPORT' | translate}}">{{'FORM.PASSPORT' | translate}}</option>
           <option value="{{'FORM.CARD' | translate}}">{{'FORM.CARD' | translate}}</option>
           <option value="{{'FORM.PERM' | translate}}">{{'FORM.PERM' | translate}}</option>
@@ -197,7 +196,8 @@
       </div>
     </div>
     <div class="col col-4">
-      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone" [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel">
+      <input type="text" ng-maxlength="12" ng-minlength="8" name="phone" required id="phone" [(ngModel)]="model.phoneNumber"
+             #phoneNumber="ngModel">
     </div>
   </div>
 
@@ -225,7 +225,7 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" value="{{incomeAmountPerson}}" min="245" step="5" name="salary" id="salary" required value="" [(ngModel)]="model.income" disabled  #income="ngModel" >
+        <input type="number" value="{{incomeAmountPerson}}" min="245" step="5" name="salary" id="salary" required  [(ngModel)]="model.income" disabled  #income="ngModel" >
       </div>
     </div>
   </div>
@@ -246,8 +246,11 @@
 
   <div class="form-item">
     <label><br></label>
-    <button data-component="modal" data-target="#confirmation-modal">{{'FORM.FINISH1' | translate}}</button>
-    <button type="submit"> {{'FORM.FINISH2' | translate}}</button>
+    <button type="submit" > {{'FORM.FINISH2' | translate}}</button>
+  </div>
+
+  <div *ngIf="trackingNumber > 0">
+    <h3>Confirmation Code: {{trackingNumber}}</h3>
   </div>
 
   <!--(click)="onSubmit(-->
@@ -270,17 +273,17 @@
 
 
 <!-- Confirmation modal-->
-<div id="confirmation-modal" class="modal-box hide">
-  <div class="modal">
-    <span class="close"></span>
-    <div class="modal-header">
-      <h3>{{'FORM.FINISH3' | translate}}</h3>
-    </div>
-    <div class="modal-body">
-      <h3>{{'FORM.CODE' | translate}}:
-        <span class="code">{{trackingNumber}}</span>
-      </h3>
-    </div>
-  </div>
-</div>
+<!--<div id="confirmation-modal" class="modal-box hide">-->
+  <!--<div class="modal">-->
+    <!--<span class="close"></span>-->
+    <!--<div class="modal-header">-->
+      <!--<h3>{{'FORM.FINISH3' | translate}}</h3>-->
+    <!--</div>-->
+    <!--<div class="modal-body">-->
+      <!--<h3>{{'FORM.CODE' | translate}}:-->
+        <!--<span class="code">{{trackingNumber}}</span>-->
+      <!--</h3>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 

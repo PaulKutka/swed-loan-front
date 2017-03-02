@@ -33,6 +33,10 @@ function checkingValue(maxValue, minValue, className) {
   });
 }
 
+$("#confirmation-modal").on('submit', function(){
+  $('.close.modal').show();
+});
+
 checkingValue(58000,500,'.requiredLoan');
 checkingValue(10000,245,'.minimumPay');
 checkingValue(60,3,'.minimumTime');
