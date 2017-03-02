@@ -43,7 +43,8 @@ $(document).ready(function () {
         minlength: 3
       },
       "number":{
-        min: 1000000
+        min: 1000000,
+        max: 99999999
       }
     },
     messages: {
@@ -55,11 +56,16 @@ $(document).ready(function () {
         email: "Email is invalid"
       },
       "code": {
-        required: "Please, enter an valid code"
+        required: "Please, enter an valid code",
+        min: "Please, enter a bigger value"
       },
       "month": {
         required: "Please, enter a valid month"
-      }
+      },
+      "number" : {
+        min: "Please, enter a bigger value",
+        max: "Please, enter a smaller value"
+      },
     }
 
   });
