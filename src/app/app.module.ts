@@ -42,7 +42,7 @@ export function createTranslateLoader(http: Http) {
 
     APP_ROUTES_PROVIDER
   ],
-  providers: [AppComponent, DataService,FormService],
+  providers: [AppComponent, DataService, FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -5,8 +5,8 @@ $(document).ready(function () {
         required: true,
         minlength: 3
       },
-      "sum" : {
-        required:true,
+      "sum": {
+        required: true,
         min: 500
       },
       "email": {
@@ -36,10 +36,10 @@ $(document).ready(function () {
         minlength: 8,
         maxlength: 12
       },
-      "surname" : {
+      "surname": {
         required: true,
         minlength: 3
-      }
+      },
     },
     messages: {
       "name": {
@@ -55,7 +55,7 @@ $(document).ready(function () {
       "month": {
         required: "Please, enter a valid month"
       }
-    },
+    }
 
   });
 

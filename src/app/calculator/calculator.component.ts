@@ -18,13 +18,13 @@ export class CalculatorComponent implements OnInit {
   incomeAmountPerson: number = 0;
   incomeAmountSpouse: number = 0;
 
-  loanSumOut: number = 0 ;
+  loanSumOut: number = 0;
   constructor() {
     setTimeout(() => this.loanSum = 500);
     setTimeout(() => this.loanTime = 3);
 
     setTimeout(() => this.incomeAmountPerson = 245);
-    setTimeout(() => this.incomeAmountSpouse = 245);
+    setTimeout(() => this.incomeAmountSpouse = 0);
   }
 
   ngOnInit() {

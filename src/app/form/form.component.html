@@ -1,9 +1,9 @@
-<form class="form form-border" (ngSubmit)="onSubmitt()" #applicationForm="ngForm" novalidate>
+<form class="form form-border" (ngSubmit)="onSubmitt()" #applicationForm="ngForm" id="form">
 
 
   <nav class="breadcrumbs">
     <ul>
-      <li><a [routerLink]="['/']">{{'FORM.1' | translate}}</a></li>
+      <li><a onclick="formUnHide()">{{'FORM.1' | translate}}</a></li>
       <li><span>{{'FORM.2' | translate}}</span></li>
     </ul>
   </nav>
@@ -16,13 +16,14 @@
   <div class="row gutters">
     <div class="col col-4 text-right">
       <div class="form-item">
+
         <label for="sum">{{'FORM.SUM' | translate}}<span class="req">*</span></label>
       </div>
     </div>
     <div class="col col-2">
       <div class="form-item">
         <input type="number" min="500" max="58000" name="sum" id="sum"  [(ngModel)]="model.sum" name="name"
-               #name="ngModel">
+               #name="ngModel" value="{{loanSum}}">
       </div>
     </div>
   </div>
@@ -38,7 +39,7 @@
 
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" id="month" name="month" min="3" max="60" required [(ngModel)]="model.term" #term="ngModel">
+        <input type="number" value="{{loanTime}}" id="month" name="month" min="3" max="60" disabled required [(ngModel)]="model.term" #term="ngModel">
         <div class="desc">{{'FORM.MĖN' | translate}}</div>
       </div>
     </div>
@@ -114,9 +115,9 @@
     <div class="col col-4">
       <div class="form-item">
         <select name="type" id="type"required [(ngModel)]="model.documentType" #documentType="ngModel" >
-          <option>{{'FORM.PASSPORT' | translate}}</option>
-          <option>{{'FORM.CARD' | translate}}</option>
-          <option>{{'FORM.PERM' | translate}}</option>
+          <option value="{{'FORM.PASSPORT' | translate}}">{{'FORM.PASSPORT' | translate}}</option>
+          <option value="{{'FORM.CARD' | translate}}">{{'FORM.CARD' | translate}}</option>
+          <option value="{{'FORM.PERM' | translate}}">{{'FORM.PERM' | translate}}</option>
         </select>
       </div>
     </div>
@@ -131,7 +132,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number" id="number" name="number" maxlength="8" required [(ngModel)]="model.documentNumber" #documentNumber="ngModel" >
+        <input type="number" id="number" name="number" minlength="7" maxlength="8" required [(ngModel)]="model.documentNumber" #documentNumber="ngModel" >
       </div>
     </div>
   </div>
@@ -224,7 +225,21 @@
     </div>
     <div class="col col-2">
       <div class="form-item">
-        <input type="number" min="245" step="5" name="salary" id="salary" required value="" [(ngModel)]="model.income" #income="ngModel" >
+        <input type="number" value="{{incomeAmountPerson}}" min="245" step="5" name="salary" id="salary" required value="" [(ngModel)]="model.income" disabled  #income="ngModel" >
+      </div>
+    </div>
+  </div>
+
+  <!-- ZMONA -->
+  <div *ngIf="incomeAmountSpouse != 0 " class="row gutters">
+    <div class="col col-4 text-right">
+      <div class="form-item">
+        <label for="wife">ZMONA PAY<span class="req">*</span></label>
+      </div>
+    </div>
+    <div class="col col-2">
+      <div class="form-item">
+        <input type="number" value="{{incomeAmountSpouse}}" min="245" step="5" name="salary" id="wife" required disabled #income>
       </div>
     </div>
   </div>

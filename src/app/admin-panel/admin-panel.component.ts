@@ -1,4 +1,3 @@
-
 import {Component, OnInit} from "@angular/core";
 import {AdminsPanelService} from "./admins-panel.service";
 import {FormService} from "../form/form.service";
@@ -17,12 +16,12 @@ export class AdminPanelComponent implements OnInit {
   adminPanels: any;
   error: any;
 
-  constructor(private adminPanel: AdminsPanelService) {}
+  constructor(private adminPanel: AdminsPanelService) {
+  }
 
   ngOnInit() {
     this.getLoanList();
   }
-
   getLoanList() {
     this.adminPanel.getLoansList()
       .then(adminPanels => {
@@ -36,12 +35,11 @@ export class AdminPanelComponent implements OnInit {
 
 
   changeStatus(status, id) {
- this.adminPanel.changeStatus(status, id).then(msg=>{
-   this.getLoanList();
- })
+    this.adminPanel.changeStatus(status, id).then(msg => {
+      this.getLoanList();
+    })
 
   };
-
 
 
 }
