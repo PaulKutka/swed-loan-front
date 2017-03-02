@@ -36,7 +36,9 @@ $(document).ready(function () {
       "phone": {
         required: true,
         minlength: 8,
-        maxlength: 12
+        maxlength: 12,
+        min: 10000000,
+        max: 1000000000
       },
       "surname": {
         required: true,
@@ -44,12 +46,17 @@ $(document).ready(function () {
       },
       "number":{
         min: 1000000,
-        max: 99999999
+        max: 99999999,
+        minlength: 11,
+        maxlength: 11
       }
     },
     messages: {
       "name": {
         required: "Please, enter a name"
+      },
+      "surname" : {
+        required : "Please, enter a surname"
       },
       "email": {
         required: "Please, enter an email",
@@ -57,15 +64,23 @@ $(document).ready(function () {
       },
       "code": {
         required: "Please, enter an valid code",
-        min: "Please, enter a bigger value"
-      },
-      "month": {
-        required: "Please, enter a valid month"
-      },
-      "number" : {
         min: "Please, enter a bigger value",
         max: "Please, enter a smaller value"
       },
+      "month": {
+        required: "Please, enter a valid month",
+        max: "Please, enter a smaller value"
+      },
+      "number" : {
+        min: "Please, enter a bigger value",
+        max: "Please, enter a smaller value",
+        minlength: "Please, enter a longer value",
+        maxlength: "Please, enter a smaller value"
+      },
+      "phone" : {
+        min: "Please, enter a bigger value",
+        max: "Please, enter a smaller value"
+      }
     }
 
   });
