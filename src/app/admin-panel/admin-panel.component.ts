@@ -22,7 +22,6 @@ export class AdminPanelComponent implements OnInit {
   ngOnInit() {
     this.getLoanList();
   }
-
   getLoanList() {
     this.adminPanel.getLoansList()
       .then(adminPanels => {

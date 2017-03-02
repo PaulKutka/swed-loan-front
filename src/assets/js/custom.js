@@ -6,6 +6,11 @@ function radioButtonHide() {
   }).change();
 }
 
+function calculatorHide(){
+  $(".form-hide").find('*').toggleClass("hidden");
+  console.log('HIT');
+}
+
 function formHide() {
   $(".form-hide").find('*').toggleClass("hidden");
   $("#form").removeClass('formMain');
