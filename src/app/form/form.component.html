@@ -115,9 +115,9 @@
     <div class="col col-4">
       <div class="form-item">
         <select name="type" id="type" required #documentType>
-          <option>{{'FORM.PASSPORT' | translate}}</option>
-          <option>{{'FORM.CARD' | translate}}</option>
-          <option>{{'FORM.PERM' | translate}}</option>
+          <option value="{{'FORM.PASSPORT' | translate}}">{{'FORM.PASSPORT' | translate}}</option>
+          <option value="{{'FORM.CARD' | translate}}">{{'FORM.CARD' | translate}}</option>
+          <option value="{{'FORM.PERM' | translate}}">{{'FORM.PERM' | translate}}</option>
         </select>
       </div>
     </div>
@@ -132,7 +132,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <input type="number" id="number" name="number" maxlength="8" required #documentNumber>
+        <input type="number" id="number" name="number" minlength="7" maxlength="8" required #documentNumber>
       </div>
     </div>
   </div>

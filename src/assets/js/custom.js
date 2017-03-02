@@ -23,31 +23,19 @@ function formUnHide() {
   window.scrollTo(0, 0);
 }
 
-// pakeisiu
-$("body").delegate('.requiredLoan', 'focusout', function () {
-  if ($(this).val() < 500) {
-    $(this).val('500');
-  }
-});
+function checkingValue(maxValue, minValue, className) {
+  $("body").delegate(className, 'focusout', function () {
+    if ($(this).val() < minValue) {
+      $(this).val(minValue);
+    } else if (maxValue < $(this).val() ){
+      $(this).val(maxValue);
+    }
+  });
+}
 
-$("body").delegate('.minimumPay', 'focusout', function () {
-  if ($(this).val() < 245) {
-    $(this).val('245');
-  }
-});
-
-$("body").delegate('.minimumTime', 'focusout', function () {
-  if ($(this).val() < 3) {
-    $(this).val('3');
-  }
-});
-
-$("body").delegate('.minimumTime', 'focusout', function () {
-  if ($(this).val() > 60) {
-    $(this).val('60');
-  }
-});
-
+checkingValue(58000,500,'.requiredLoan');
+checkingValue(10000,245,'.minimumPay');
+checkingValue(60,3,'.minimumTime');
 
 function showTables() {
   $('app-loan-tables').removeClass('hidden-tables');
