@@ -6,9 +6,9 @@ import {State} from "./states";
 export class DataService {
   getCountries() {
     return [
-      new Country(1, 'Lietuva' ),
-      new Country(2, 'Lenkija' ),
-      new Country(3, 'Švedija' )
+      new Country(1, 'Lithuania' ),
+      new Country(2, 'Poland' ),
+      new Country(3, 'Sweden' )
     ];
   }
 
@@ -17,11 +17,12 @@ export class DataService {
       new State(1, 1, 'Vilnius' ),
       new State(2, 1, 'Kaunas' ),
       new State(3, 1, 'Panevežys'),
-      new State(5, 2, 'Wilno' ),
-      new State(6, 2, 'Gzegowš'),
-      new State(7, 2, 'Rščern' ),
-      new State(8, 3, 'Oslas' ),
-      new State(9, 3, 'Oslas2' )
+      new State(4, 2, 'Warsaw' ),
+      new State(5, 2, 'Gdansk'),
+      new State(6, 2, 'Zakopane' ),
+      new State(7, 3, 'Stockholm' ),
+      new State(8, 3, 'Gothenburg' ),
+      new State(9, 3, 'Malmö' )
     ];
   }
 }
