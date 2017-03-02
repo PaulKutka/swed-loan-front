@@ -23,7 +23,7 @@
     <div class="col col-2">
       <div class="form-item">
         <input type="number" min="500" max="58000" name="sum" id="sum"  [(ngModel)]="model.sum" name="name"
-               #name="ngModel" value="{{loanSum}}">
+               #name="ngModel" value="{{loanSum}}" disabled>
       </div>
     </div>
   </div>
@@ -150,7 +150,7 @@
     </div>
     <div class="col col-4">
       <div class="form-item">
-        <select  [(ngModel)]="model.country" (change)="onSelect($event.target.value)" #country="ngModel" name="country">
+        <select  [(ngModel)]="model.country" (change)="onSelect($event.target.value)" #country="ngModel" name="country" required>
           <option value="0">--Select--</option>
           <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
         </select>
