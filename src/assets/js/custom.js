@@ -52,7 +52,3 @@ $('.calculateButton').click(function () {
 function showValues(){
   window.scrollTo(500, 500);
 }
-
-function closeModal(number){
-  console.log(number);
-}
